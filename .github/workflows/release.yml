@@ -43,7 +43,14 @@ jobs:
         working-directory: packages/vscode-theme
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
-        run: vsce publish --no-dependencies -p "$VSCE_PAT"
+        run: |
+          OUTPUT=$(vsce publish --no-dependencies -p "$VSCE_PAT" 2>&1) && exit 0
+          if echo "$OUTPUT" | grep -q "already exists"; then
+            echo "::warning::Version already published to Marketplace — skipping."
+          else
+            echo "$OUTPUT"
+            exit 1
+          fi
 
       - name: Package theme assets
         run: |

@@ -12,6 +12,7 @@
     "generate:check": "node packages/generator/build.mjs --check",
     "color:audit": "node scripts/color-audit.mjs",
     "validate:json": "node scripts/validate-json.mjs",
-    "check": "npm run generate:check && npm run validate:json && npm run color:audit"
+    "check": "npm run generate:check && npm run validate:json && npm run color:audit",
+    "release": "node scripts/release.mjs"
   }
 }
