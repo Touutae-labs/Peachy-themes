@@ -7,7 +7,8 @@ const files = [
   "packages/tokens/package.json",
   "packages/tokens/peachy.tokens.json",
   "packages/vscode-theme/package.json",
-  "packages/vscode-theme/themes/Peachy Themes-color-theme.json",
+  "packages/vscode-theme/themes/Peachy Pink-color-theme.json",
+  "packages/vscode-theme/themes/Peachy Peach-color-theme.json",
   "packages/vscode-theme/examples/peachy-language-settings.json",
   "packages/oh-my-posh/peachy.omp.json"
 ];

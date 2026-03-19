@@ -2,7 +2,7 @@
   "name": "peachy-themes",
   "displayName": "Peachy Themes",
   "description": "A sweet peach-toned VS Code theme with cozy contrast and soft candy syntax colors.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "Piros-k",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -36,9 +36,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Peachy Themes",
+        "label": "Peachy Themes - Pink",
         "uiTheme": "vs-dark",
-        "path": "./themes/Peachy Themes-color-theme.json"
+        "path": "./themes/Peachy Pink-color-theme.json"
+      },
+      {
+        "label": "Peachy Themes - Peach",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Peachy Peach-color-theme.json"
       }
     ]
   }

@@ -9,7 +9,7 @@ const packageCards = [
   {
     title: "VS Code Theme",
     badge: "Flagship",
-    detail: "The original theme package, now surrounded by docs, assets, and release automation.",
+    detail: "Two variants in one extension: Pink (the original vibrant look) and Peach (a softer token-based palette).",
     path: "packages/vscode-theme"
   },
   {
@@ -47,11 +47,11 @@ const packageCards = [
 const installGuides = [
   {
     title: "VS Code",
-    badge: "Marketplace",
-    detail: "Install the flagship extension from the Marketplace or package it locally for release testing.",
+    badge: "2 variants",
+    detail: "Install one extension, get both Pink (legacy) and Peach (new) themes. Pick your favorite from the Color Theme picker.",
     code: [
-      "Marketplace: https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes&ssr=false#overview",
-      "Local check: npm run check"
+      "code --install-extension Piros-k.peachy-themes",
+      "# Then: Ctrl+Shift+P → Color Theme → Peachy Themes - Pink or Peach"
     ]
   },
   {
@@ -87,7 +87,7 @@ const portCards = [
   {
     title: "VS Code",
     badge: "Ready",
-    detail: "Complete theme package with manifest, icon, docs, and release workflow support."
+    detail: "Two variants (Pink + Peach) with manifest, icon, docs, and automated Marketplace publishing."
   },
   {
     title: "LazyVim",
@@ -127,7 +127,7 @@ const releaseFlow = [
   },
   {
     title: "Tag",
-    detail: "Create a semver tag like `v0.1.0` once the package looks right."
+    detail: "Create a semver tag like `v0.2.0` once the package looks right."
   },
   {
     title: "Package",
@@ -135,7 +135,7 @@ const releaseFlow = [
   },
   {
     title: "Publish",
-    detail: "If the VS Code publisher account is available and `VSCE_PAT` exists, the release workflow can publish the extension."
+    detail: "The release workflow publishes the extension (both variants) to the VS Code Marketplace and creates a GitHub Release."
   }
 ];
 
