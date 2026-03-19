@@ -1,0 +1,248 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Peachy logo Peachy Collection" [ref=e4] [cursor=pointer]:
+        - /url: ./index.html
+        - img "Peachy logo" [ref=e5]
+        - generic [ref=e6]:
+          - generic [ref=e7]: Peachy
+          - generic [ref=e8]: Collection
+      - generic [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: ./index.html
+        - link "Docs" [ref=e11] [cursor=pointer]:
+          - /url: ./docs.html
+        - link "Palette" [ref=e12] [cursor=pointer]:
+          - /url: ./index.html#palette
+        - link "Playground" [ref=e13] [cursor=pointer]:
+          - /url: ../playground/index.html
+  - main [ref=e14]:
+    - complementary [ref=e15]:
+      - paragraph [ref=e16]: Guides
+      - list [ref=e17]:
+        - listitem [ref=e18]:
+          - link "Getting Started" [ref=e19] [cursor=pointer]:
+            - /url: "#getting-started"
+        - listitem [ref=e20]:
+          - link "VS Code" [ref=e21] [cursor=pointer]:
+            - /url: "#vscode"
+        - listitem [ref=e22]:
+          - link "LazyVim" [ref=e23] [cursor=pointer]:
+            - /url: "#lazyvim"
+        - listitem [ref=e24]:
+          - link "Oh My Posh" [ref=e25] [cursor=pointer]:
+            - /url: "#oh-my-posh"
+        - listitem [ref=e26]:
+          - link "WezTerm" [ref=e27] [cursor=pointer]:
+            - /url: "#wezterm"
+        - listitem [ref=e28]:
+          - link "Design Tokens" [ref=e29] [cursor=pointer]:
+            - /url: "#tokens"
+        - listitem [ref=e30]:
+          - link "Generator" [ref=e31] [cursor=pointer]:
+            - /url: "#generator"
+        - listitem [ref=e32]:
+          - link "Contributing" [ref=e33] [cursor=pointer]:
+            - /url: "#contributing"
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - paragraph [ref=e36]: Overview
+        - heading "Getting Started" [level=1] [ref=e37]
+        - paragraph [ref=e38]: Peachy Collection is a family of themes that share a single, consistent color palette across your entire development environment. Start with one tool and expand to others whenever you're ready.
+        - generic [ref=e39]:
+          - link "VS Code The flagship theme with full syntax and UI coverage. 3.6k+ installs" [ref=e40] [cursor=pointer]:
+            - /url: "#vscode"
+            - heading "VS Code" [level=3] [ref=e41]
+            - paragraph [ref=e42]: The flagship theme with full syntax and UI coverage.
+            - generic [ref=e43]: 3.6k+ installs
+          - link "LazyVim Neovim colorscheme for LazyVim and any Lua-based config. Lua" [ref=e44] [cursor=pointer]:
+            - /url: "#lazyvim"
+            - heading "LazyVim" [level=3] [ref=e45]
+            - paragraph [ref=e46]: Neovim colorscheme for LazyVim and any Lua-based config.
+            - generic [ref=e47]: Lua
+          - link "Oh My Posh Shell prompt that matches your editor palette. JSON config" [ref=e48] [cursor=pointer]:
+            - /url: "#oh-my-posh"
+            - heading "Oh My Posh" [level=3] [ref=e49]
+            - paragraph [ref=e50]: Shell prompt that matches your editor palette.
+            - generic [ref=e51]: JSON config
+          - link "WezTerm Terminal color scheme with tab bar styling. Lua" [ref=e52] [cursor=pointer]:
+            - /url: "#wezterm"
+            - heading "WezTerm" [level=3] [ref=e53]
+            - paragraph [ref=e54]: Terminal color scheme with tab bar styling.
+            - generic [ref=e55]: Lua
+        - heading "Clone the repo" [level=2] [ref=e56]
+        - code [ref=e58]: "# Clone the collection git clone https://github.com/Touutae-labs/Peachy-themes.git cd Peachy-themes # Generate shared assets (tokens → CSS, JS, JSON) npm run generate # Run the full validation suite npm run check"
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: Editor
+        - heading "VS Code" [level=2] [ref=e61]
+        - paragraph [ref=e62]: The original Peachy theme — a warm dark theme with soft pinks, creamy highlights, and minty keywords.
+        - heading "Install from Marketplace" [level=3] [ref=e63]
+        - code [ref=e65]: "# Option 1: VS Code Quick Open (Ctrl+P / Cmd+P) ext install Piros-k.peachy-themes # Option 2: Command line code --install-extension Piros-k.peachy-themes"
+        - paragraph [ref=e66]:
+          - text: Or search
+          - strong [ref=e67]: "\"Peachy Themes\""
+          - text: in the Extensions sidebar.
+        - heading "Activate" [level=3] [ref=e68]
+        - paragraph [ref=e69]:
+          - text: Open the Command Palette (
+          - code [ref=e70]: Ctrl+Shift+P
+          - text: /
+          - code [ref=e71]: Cmd+Shift+P
+          - text: ), search
+          - code [ref=e72]: Color Theme
+          - text: ", and select"
+          - strong [ref=e73]: Peachy Themes
+          - text: .
+        - heading "What's covered" [level=3] [ref=e74]
+        - list [ref=e75]:
+          - listitem [ref=e76]: 216 UI color tokens (editor, sidebar, terminal, git, diff, brackets…)
+          - listitem [ref=e77]: 26 TextMate scope categories for syntax highlighting
+          - listitem [ref=e78]: Semantic highlighting for classes, decorators, enums, interfaces, and more
+        - generic [ref=e79]:
+          - link "View on Marketplace" [ref=e80] [cursor=pointer]:
+            - /url: https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes
+          - link "Source on GitHub" [ref=e81] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/vscode-theme
+      - generic [ref=e82]:
+        - paragraph [ref=e83]: Editor
+        - heading "LazyVim / Neovim" [level=2] [ref=e84]
+        - paragraph [ref=e85]: A Lua colorscheme for Neovim that covers 100+ highlight groups including Treesitter, LSP diagnostics, and Git signs.
+        - heading "Install" [level=3] [ref=e86]
+        - paragraph [ref=e87]: "Copy the theme into your Neovim config:"
+        - code [ref=e89]: "-- Copy the folder into your config cp -r packages/lazyvim/lua/peachy ~/.config/nvim/lua/ -- Then in your init.lua or LazyVim config: require(\"peachy\")"
+        - heading "What's covered" [level=3] [ref=e90]
+        - list [ref=e91]:
+          - listitem [ref=e92]: Normal, Float, Cursor, Search, Visual highlight groups
+          - listitem [ref=e93]: Full Treesitter scopes (@property, @tag, @function, @keyword…)
+          - listitem [ref=e94]: LSP diagnostics (Error, Warn, Info, Hint)
+          - listitem [ref=e95]: Git signs and diff colors
+          - listitem [ref=e96]: Pmenu, TabLine, StatusLine
+        - link "Source on GitHub" [ref=e98] [cursor=pointer]:
+          - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/lazyvim
+      - generic [ref=e99]:
+        - paragraph [ref=e100]: Terminal
+        - heading "Oh My Posh" [level=2] [ref=e101]
+        - paragraph [ref=e102]: A prompt theme with segments for session, path, git, and Node.js — all using the Peachy palette.
+        - heading "Install" [level=3] [ref=e103]
+        - code [ref=e105]: "# Copy the config file cp packages/oh-my-posh/peachy.omp.json ~/.config/ # Add to your shell profile (.bashrc, .zshrc, etc.) eval \"$(oh-my-posh init zsh --config ~/.config/peachy.omp.json)\""
+        - heading "Segments" [level=3] [ref=e106]
+        - list [ref=e107]:
+          - listitem [ref=e108]:
+            - strong [ref=e109]: Session
+            - text: — username on peach background
+          - listitem [ref=e110]:
+            - strong [ref=e111]: Path
+            - text: — current directory with folder icon
+          - listitem [ref=e112]:
+            - strong [ref=e113]: Git
+            - text: — branch name on cream background
+          - listitem [ref=e114]:
+            - strong [ref=e115]: Node
+            - text: — Node.js version on mint background
+          - listitem [ref=e116]:
+            - strong [ref=e117]: Execution time
+            - text: — right-aligned, soft foreground
+          - listitem [ref=e118]:
+            - strong [ref=e119]: Exit status
+            - text: — right-aligned, rose on error
+        - link "Source on GitHub" [ref=e121] [cursor=pointer]:
+          - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/oh-my-posh
+      - generic [ref=e122]:
+        - paragraph [ref=e123]: Terminal
+        - heading "WezTerm" [level=2] [ref=e124]
+        - paragraph [ref=e125]: A complete terminal color scheme including ANSI colors, tab bar styling, and selection highlights.
+        - heading "Install" [level=3] [ref=e126]
+        - code [ref=e128]: "-- In your wezterm.lua, load the palette: local peachy = dofile( os.getenv(\"HOME\") .. \"/.config/wezterm/peachy.lua\" ) return { colors = peachy, }"
+        - heading "What's covered" [level=3] [ref=e129]
+        - list [ref=e130]:
+          - listitem [ref=e131]: Foreground, background, cursor, and selection colors
+          - listitem [ref=e132]: 8 standard + 8 bright ANSI colors
+          - listitem [ref=e133]: Indexed colors for melon and soft accents
+          - listitem [ref=e134]: Tab bar colors (active, inactive, hover)
+          - listitem [ref=e135]: Copy mode and quick select mode highlights
+        - link "Source on GitHub" [ref=e137] [cursor=pointer]:
+          - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/wezterm
+      - generic [ref=e138]:
+        - paragraph [ref=e139]: System
+        - heading "Design Tokens" [level=2] [ref=e140]
+        - paragraph [ref=e141]: The single source of truth for the entire Peachy palette. Every theme and app is derived from this one file.
+        - heading "Structure" [level=3] [ref=e142]
+        - code [ref=e144]: "// packages/tokens/peachy.tokens.json { \"name\": \"Peachy\", \"colors\": { \"peach.500\": \"#ff928b\", \"cream.300\": \"#efe9ae\", \"mint.300\": \"#cdeac0\", // ... 19 colors total }, \"roles\": { \"accent.primary\": \"peach.500\", \"accent.syntax.keyword\": \"mint.300\", // ... semantic role mappings } }"
+        - heading "Generated outputs" [level=3] [ref=e145]
+        - list [ref=e146]:
+          - listitem [ref=e147]:
+            - code [ref=e148]: peachy.json
+            - text: — JSON for programmatic use
+          - listitem [ref=e149]:
+            - code [ref=e150]: peachy.css
+            - text: — CSS custom properties (
+            - code [ref=e151]: ":root { --peach: #ff928b; }"
+            - text: )
+          - listitem [ref=e152]:
+            - code [ref=e153]: palette.js
+            - text: — Browser-ready JS object for the site and playground
+        - generic [ref=e154]:
+          - link "View Full Palette" [ref=e155] [cursor=pointer]:
+            - /url: ./palette.html
+          - link "Source on GitHub" [ref=e156] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/tokens
+      - generic [ref=e157]:
+        - paragraph [ref=e158]: System
+        - heading "Generator" [level=2] [ref=e159]
+        - paragraph [ref=e160]: The build script that reads tokens and produces all shared assets.
+        - code [ref=e162]: "# Generate all shared assets npm run generate # Check that generated files are up-to-date (CI uses this) npm run generate:check # Full validation: generate + validate JSON + audit contrast npm run check"
+        - heading "What it produces" [level=3] [ref=e163]
+        - list [ref=e164]:
+          - listitem [ref=e165]:
+            - code [ref=e166]: packages/tokens/dist/peachy.json
+            - text: +
+            - code [ref=e167]: peachy.css
+          - listitem [ref=e168]:
+            - code [ref=e169]: apps/site/generated/tokens.css
+            - text: +
+            - code [ref=e170]: palette.js
+          - listitem [ref=e171]:
+            - code [ref=e172]: apps/playground/generated/tokens.css
+            - text: +
+            - code [ref=e173]: palette.js
+      - generic [ref=e174]:
+        - paragraph [ref=e175]: Community
+        - heading "Contributing" [level=2] [ref=e176]
+        - paragraph [ref=e177]: "Peachy Collection is open source. Here's how to contribute:"
+        - heading "Adding or adjusting colors" [level=3] [ref=e178]
+        - list [ref=e179]:
+          - listitem [ref=e180]:
+            - text: Edit
+            - code [ref=e181]: packages/tokens/peachy.tokens.json
+          - listitem [ref=e182]:
+            - text: Run
+            - code [ref=e183]: npm run generate
+            - text: to propagate changes
+          - listitem [ref=e184]:
+            - text: Run
+            - code [ref=e185]: npm run check
+            - text: to validate contrast ratios
+          - listitem [ref=e186]: Open a pull request — Cloudflare Pages will generate a preview URL automatically
+        - heading "Adding a new port" [level=3] [ref=e187]
+        - list [ref=e188]:
+          - listitem [ref=e189]:
+            - text: Create a new folder under
+            - code [ref=e190]: packages/
+          - listitem [ref=e191]: Import colors from the generated token files
+          - listitem [ref=e192]: Add validation to the CI workflow if applicable
+          - listitem [ref=e193]: Document the install steps in the docs page
+        - generic [ref=e194]:
+          - link "Open an Issue" [ref=e195] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/issues
+          - link "Discussions" [ref=e196] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/discussions
+  - contentinfo [ref=e197]:
+    - paragraph [ref=e198]:
+      - text: Made with warmth by
+      - link "Touutae Labs" [ref=e199] [cursor=pointer]:
+        - /url: https://github.com/Touutae-labs
+    - paragraph [ref=e200]:
+      - link "GitHub" [ref=e201] [cursor=pointer]:
+        - /url: https://github.com/Touutae-labs/Peachy-themes
+      - link "VS Code Marketplace" [ref=e202] [cursor=pointer]:
+        - /url: https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes

@@ -1,0 +1,143 @@
+.palette-hero {
+  padding: 0 0 1rem;
+}
+
+.palette-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0;
+}
+
+.palette-main {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.color-item {
+  border-radius: 1.15rem;
+  overflow: hidden;
+  border: 1px solid rgba(254, 195, 214, 0.12);
+  background: rgba(45, 47, 66, 0.7);
+  cursor: pointer;
+  transition: border-color 200ms, transform 200ms;
+}
+
+.color-item:hover {
+  border-color: rgba(255, 146, 139, 0.3);
+  transform: translateY(-2px);
+}
+
+.color-chip {
+  height: 100px;
+  position: relative;
+}
+
+.color-chip-hex {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  padding: 0.15em 0.45em;
+  border-radius: 0.3em;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.color-info {
+  padding: 0.85rem 1rem;
+}
+
+.color-name {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.color-role {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.copied-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--peach);
+  color: #202330;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.copied-toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.role-section {
+  margin: 3rem 0 1rem;
+}
+
+.role-section h2 {
+  font-size: 1.6rem;
+  margin: 0 0 0.3rem;
+}
+
+.role-section p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.role-table th,
+.role-table td {
+  text-align: left;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(254, 195, 214, 0.08);
+}
+
+.role-table th {
+  color: var(--soft);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.role-table td {
+  color: var(--muted);
+}
+
+.role-swatch {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 0.3rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.role-hex {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--text);
+}

@@ -6,24 +6,25 @@
     <title>Peachy Collection</title>
     <meta
       name="description"
-      content="A cozy collection of Peachy themes for VS Code, LazyVim, terminal prompts, and the web."
+      content="Docs-first showcase for the Peachy Collection theme family across VS Code, LazyVim, Oh My Posh, WezTerm, and shared tokens."
     />
     <meta name="theme-color" content="#202330" />
-    <link rel="canonical" href="https://peachytheme.party/site/" />
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://peachytheme.party/site/" />
-    <meta property="og:title" content="Peachy Collection — Soft themes for your whole dev setup" />
-    <meta property="og:description" content="A cozy collection of Peachy themes for VS Code, LazyVim, terminal prompts, and the web." />
-    <meta property="og:image" content="https://peachytheme.party/site/assets/peachy-social-card.svg" />
+    <meta property="og:title" content="Peachy Collection" />
+    <meta
+      property="og:description"
+      content="Docs-first showcase for the Peachy Collection theme family across editors, terminals, and prompts."
+    />
+    <meta property="og:image" content="./assets/peachy-social-card.svg" />
     <meta property="og:site_name" content="Peachy Collection" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Peachy Collection — Soft themes for your whole dev setup" />
-    <meta name="twitter:description" content="A cozy collection of Peachy themes for VS Code, LazyVim, terminal prompts, and the web." />
-    <meta name="twitter:image" content="https://peachytheme.party/site/assets/peachy-social-card.svg" />
+    <meta name="twitter:title" content="Peachy Collection" />
+    <meta
+      name="twitter:description"
+      content="Docs-first showcase for the Peachy Collection theme family across editors, terminals, and prompts."
+    />
+    <meta name="twitter:image" content="./assets/peachy-social-card.svg" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +36,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to documentation</a>
     <div class="backdrop backdrop-a"></div>
     <div class="backdrop backdrop-b"></div>
 
@@ -48,102 +50,181 @@
           </div>
         </div>
         <div class="nav-links">
-          <a href="#collection">Collection</a>
-          <a href="#palette">Palette</a>
+          <a href="#overview">Overview</a>
+          <a href="#packages">Packages</a>
           <a href="#install">Install</a>
+          <a href="./docs.html">Docs</a>
+          <a href="./palette.html">Palette</a>
+          <a href="../playground/index.html">Playground</a>
         </div>
       </nav>
 
       <section class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Theme family</p>
-          <h1>Soft, sweet tooling for people who want their setup to feel alive.</h1>
+          <p class="eyebrow">Docs + showcase</p>
+          <h1>Peachy is a docs-first theme family for the whole dev setup.</h1>
           <p class="lede">
-            Peachy starts with the original VS Code theme and grows into a full collection:
-            editor ports, shell prompts, documentation, and a shared palette you can keep tuning.
+            This site is the front door for the repo. It explains the package layout, how to
+            install each port, how the release pipeline works, and how to keep the colors in sync
+            while the collection grows.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes&ssr=false#overview">Install VS Code Theme</a>
-            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes">Open GitHub</a>
+            <a
+              class="button primary"
+              href="https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes&ssr=false#overview"
+            >
+              Install VS Code Theme
+            </a>
+            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes">
+              Open GitHub
+            </a>
+            <a class="button secondary" href="./docs.html">Read Detailed Docs</a>
             <a class="button secondary" href="../playground/index.html">Open Playground</a>
           </div>
+          <div class="hero-stats" id="hero-stats"></div>
         </div>
 
         <div class="preview-card">
           <div class="preview-brand">
             <img src="./assets/peachy-logo.svg" alt="Peachy Collection" />
           </div>
-          <div class="window-bar">
+          <div class="window-bar" aria-hidden="true">
             <span></span><span></span><span></span>
           </div>
-          <pre class="code-preview"><code>const peachy = {
-  background: "#202330",
-  peach: "#ff928b",
-  cream: "#efe9ae",
-  mint: "#cdeac0"
-}
-
-function sweeten(editor) {
-  return editor.apply(peachy)
-}</code></pre>
+          <pre class="code-preview"><code>Peachy Collection
+├─ packages/vscode-theme
+├─ packages/tokens
+├─ packages/generator
+├─ packages/lazyvim
+├─ packages/oh-my-posh
+└─ packages/wezterm</code></pre>
         </div>
       </section>
     </header>
 
-    <main>
-      <section class="section" id="collection">
-        <div class="section-heading">
-          <p class="eyebrow">Collection</p>
-          <h2>One palette, multiple homes.</h2>
-        </div>
-        <div class="card-grid">
-          <article class="card">
-            <h3>VS Code</h3>
-            <p>The original Peachy extension, upgraded as the flagship package in the collection.</p>
-          </article>
-          <article class="card">
-            <h3>LazyVim</h3>
-            <p>A starter Neovim colorscheme that keeps the same dark base, sweet pinks, and cream highlights.</p>
-          </article>
-          <article class="card">
-            <h3>Oh My Posh</h3>
-            <p>A matching shell prompt so your terminal feels like part of the same visual world.</p>
-          </article>
-          <article class="card">
-            <h3>Tokens + Generator</h3>
-            <p>Shared tokens and generated assets make future ports easier and keep color decisions consistent.</p>
-          </article>
-        </div>
-      </section>
+    <main id="main" class="docs-layout">
+      <aside class="docs-nav" aria-label="Documentation navigation">
+        <section class="toc-card">
+          <p class="toc-title">Docs nav</p>
+          <a href="#overview">Overview</a>
+          <a href="#packages">Package map</a>
+          <a href="#install">Install guides</a>
+          <a href="#ports">Theme ports</a>
+          <a href="#release">Release flow</a>
+          <a href="#palette">Palette</a>
+          <a href="#resources">Resources</a>
+        </section>
+        <section class="toc-card">
+          <p class="toc-title">Repo links</p>
+          <a href="https://github.com/Touutae-labs/Peachy-themes/blob/main/README.md">Root README</a>
+          <a href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/vscode-theme">VS Code package</a>
+          <a href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/lazyvim">LazyVim package</a>
+          <a href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/oh-my-posh">Oh My Posh package</a>
+          <a href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/wezterm">WezTerm package</a>
+        </section>
+      </aside>
 
-      <section class="section palette-section" id="palette">
-        <div class="section-heading">
-          <p class="eyebrow">Palette</p>
-          <h2>The Peachy core.</h2>
-        </div>
-        <div class="swatches" id="swatches"></div>
-      </section>
+      <div class="docs-content">
+        <section class="section" id="overview">
+          <div class="section-heading">
+            <p class="eyebrow">Overview</p>
+            <h2>What this repo is for.</h2>
+          </div>
+          <div class="overview-grid">
+            <article class="info-card">
+              <h3>One shared palette</h3>
+              <p>
+                Peachy tokens live in a single source of truth and feed the website, preview
+                assets, and theme packages.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Multiple ports</h3>
+              <p>
+                VS Code is the flagship package, with starter or complete ports for LazyVim, Oh
+                My Posh, and WezTerm.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Docs-first workflow</h3>
+              <p>
+                This page explains how the repo is organized, how to publish it, and how to keep
+                the palette consistent.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Release ready</h3>
+              <p>
+                GitHub Actions generates release assets, validates the theme, and packages the VS
+                Code extension when the publisher account is available.
+              </p>
+            </article>
+          </div>
+        </section>
 
-      <section class="section install-section" id="install">
-        <div class="section-heading">
-          <p class="eyebrow">Install</p>
-          <h2>Grow the collection from one repo.</h2>
-        </div>
-        <div class="install-layout">
-          <div class="install-copy">
+        <section class="section" id="packages">
+          <div class="section-heading">
+            <p class="eyebrow">Package map</p>
+            <h2>The collection at a glance.</h2>
+          </div>
+          <div class="card-grid" id="package-grid"></div>
+        </section>
+
+        <section class="section" id="install">
+          <div class="section-heading">
+            <p class="eyebrow">Install</p>
+            <h2>Guides for each port.</h2>
+          </div>
+          <div class="install-grid" id="install-grid"></div>
+        </section>
+
+        <section class="section" id="ports">
+          <div class="section-heading">
+            <p class="eyebrow">Theme ports</p>
+            <h2>What is ready and what is still growing.</h2>
+          </div>
+          <div class="port-grid" id="ports-grid"></div>
+        </section>
+
+        <section class="section" id="release">
+          <div class="section-heading">
+            <p class="eyebrow">Release flow</p>
+            <h2>How we ship updates.</h2>
+          </div>
+          <div class="timeline" id="release-flow"></div>
+          <div class="callout">
             <p>
-              Start with the VS Code theme, then expand the same mood into your editor, prompt,
-              and docs site. The collection is organized so each port can become its own package or repo later.
+              The release workflow packages the VS Code extension, builds tarballs for the other
+              ports, and can publish to the Marketplace when a valid `VSCE_PAT` secret exists and
+              the publisher account is recoverable.
             </p>
           </div>
-          <div class="terminal">
-            <pre><code>git clone git@github.com:Touutae-labs/Peachy-themes.git
-cd Peachy-themes
-node scripts/color-audit.mjs</code></pre>
+        </section>
+
+        <section class="section" id="palette">
+          <div class="section-heading">
+            <p class="eyebrow">Palette</p>
+            <h2>The Peachy core.</h2>
           </div>
-        </div>
-      </section>
+          <div class="swatches" id="swatches"></div>
+        </section>
+
+        <section class="section" id="resources">
+          <div class="section-heading">
+            <p class="eyebrow">Resources</p>
+            <h2>Where to read next.</h2>
+          </div>
+          <div class="resource-grid" id="resource-grid"></div>
+        </section>
+      </div>
     </main>
+
+    <footer class="footer">
+      <p>
+        Peachy Collection is tuned to stay soft, readable, and easy to extend across editors and
+        terminal tools.
+      </p>
+    </footer>
 
     <script src="./generated/palette.js"></script>
     <script src="./script.js"></script>

@@ -1,0 +1,311 @@
+- generic [active] [ref=e1]:
+  - link "Skip to documentation" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - img "Peachy logo" [ref=e6]
+        - generic [ref=e7]:
+          - generic [ref=e8]: Peachy
+          - generic [ref=e9]: Collection
+      - generic [ref=e10]:
+        - link "Overview" [ref=e11] [cursor=pointer]:
+          - /url: "#overview"
+        - link "Packages" [ref=e12] [cursor=pointer]:
+          - /url: "#packages"
+        - link "Install" [ref=e13] [cursor=pointer]:
+          - /url: "#install"
+        - link "Release" [ref=e14] [cursor=pointer]:
+          - /url: "#release"
+        - link "Palette" [ref=e15] [cursor=pointer]:
+          - /url: "#palette"
+        - link "Docs" [ref=e16] [cursor=pointer]:
+          - /url: ./docs.html
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Docs + showcase
+        - heading "Peachy is a docs-first theme family for the whole dev setup." [level=1] [ref=e20]
+        - paragraph [ref=e21]: This site is the front door for the repo. It explains the package layout, how to install each port, how the release pipeline works, and how to keep the colors in sync while the collection grows.
+        - generic [ref=e22]:
+          - link "Install VS Code Theme" [ref=e23] [cursor=pointer]:
+            - /url: https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes&ssr=false#overview
+          - link "Open GitHub" [ref=e24] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes
+          - link "Read Detailed Docs" [ref=e25] [cursor=pointer]:
+            - /url: ./docs.html
+          - link "Open Playground" [ref=e26] [cursor=pointer]:
+            - /url: ../playground/index.html
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - strong [ref=e29]: "6"
+            - text: packages in the collection
+          - generic [ref=e30]:
+            - strong [ref=e31]: "1"
+            - text: shared token source
+          - generic [ref=e32]:
+            - strong [ref=e33]: "4"
+            - text: theme ports ready to grow
+          - generic [ref=e34]:
+            - strong [ref=e35]: "1"
+            - text: docs-first release pipeline
+      - generic [ref=e36]:
+        - img "Peachy Collection" [ref=e38]
+        - code [ref=e44]: Peachy Collection ├─ packages/vscode-theme ├─ packages/tokens ├─ packages/generator ├─ packages/lazyvim ├─ packages/oh-my-posh └─ packages/wezterm
+  - main [ref=e45]:
+    - complementary "Documentation navigation" [ref=e46]:
+      - generic [ref=e47]:
+        - paragraph [ref=e48]: Docs nav
+        - link "Overview" [ref=e49] [cursor=pointer]:
+          - /url: "#overview"
+        - link "Package map" [ref=e50] [cursor=pointer]:
+          - /url: "#packages"
+        - link "Install guides" [ref=e51] [cursor=pointer]:
+          - /url: "#install"
+        - link "Theme ports" [ref=e52] [cursor=pointer]:
+          - /url: "#ports"
+        - link "Release flow" [ref=e53] [cursor=pointer]:
+          - /url: "#release"
+        - link "Palette" [ref=e54] [cursor=pointer]:
+          - /url: "#palette"
+        - link "Resources" [ref=e55] [cursor=pointer]:
+          - /url: "#resources"
+      - generic [ref=e56]:
+        - paragraph [ref=e57]: Repo links
+        - link "Root README" [ref=e58] [cursor=pointer]:
+          - /url: https://github.com/Touutae-labs/Peachy-themes/blob/main/README.md
+        - link "VS Code package" [ref=e59] [cursor=pointer]:
+          - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/vscode-theme
+        - link "LazyVim package" [ref=e60] [cursor=pointer]:
+          - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/lazyvim
+        - link "Oh My Posh package" [ref=e61] [cursor=pointer]:
+          - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/oh-my-posh
+        - link "WezTerm package" [ref=e62] [cursor=pointer]:
+          - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/wezterm
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: Overview
+          - heading "What this repo is for." [level=2] [ref=e67]
+        - generic [ref=e68]:
+          - article [ref=e69]:
+            - heading "One shared palette" [level=3] [ref=e70]
+            - paragraph [ref=e71]: Peachy tokens live in a single source of truth and feed the website, preview assets, and theme packages.
+          - article [ref=e72]:
+            - heading "Multiple ports" [level=3] [ref=e73]
+            - paragraph [ref=e74]: VS Code is the flagship package, with starter or complete ports for LazyVim, Oh My Posh, and WezTerm.
+          - article [ref=e75]:
+            - heading "Docs-first workflow" [level=3] [ref=e76]
+            - paragraph [ref=e77]: This page explains how the repo is organized, how to publish it, and how to keep the palette consistent.
+          - article [ref=e78]:
+            - heading "Release ready" [level=3] [ref=e79]
+            - paragraph [ref=e80]: GitHub Actions generates release assets, validates the theme, and packages the VS Code extension when the publisher account is available.
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - paragraph [ref=e83]: Package map
+          - heading "The collection at a glance." [level=2] [ref=e84]
+        - generic [ref=e85]:
+          - article [ref=e86]:
+            - generic [ref=e88]: Flagship
+            - heading "VS Code Theme" [level=3] [ref=e89]
+            - paragraph [ref=e90]: The original theme package, now surrounded by docs, assets, and release automation.
+            - paragraph [ref=e91]:
+              - link "Open package" [ref=e92] [cursor=pointer]:
+                - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/vscode-theme
+          - article [ref=e93]:
+            - generic [ref=e95]: Source of truth
+            - heading "Tokens" [level=3] [ref=e96]
+            - paragraph [ref=e97]: Shared Peachy colors and semantic roles used across the website and packages.
+            - paragraph [ref=e98]:
+              - link "Open package" [ref=e99] [cursor=pointer]:
+                - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/tokens
+          - article [ref=e100]:
+            - generic [ref=e102]: Build step
+            - heading "Generator" [level=3] [ref=e103]
+            - paragraph [ref=e104]: Produces shared CSS and JSON exports from the token file so the collection stays in sync.
+            - paragraph [ref=e105]:
+              - link "Open package" [ref=e106] [cursor=pointer]:
+                - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/generator
+          - article [ref=e107]:
+            - generic [ref=e109]: Port
+            - heading "LazyVim" [level=3] [ref=e110]
+            - paragraph [ref=e111]: A Neovim colorscheme module that mirrors the Peachy syntax feel for editor users.
+            - paragraph [ref=e112]:
+              - link "Open package" [ref=e113] [cursor=pointer]:
+                - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/lazyvim
+          - article [ref=e114]:
+            - generic [ref=e116]: Port
+            - heading "Oh My Posh" [level=3] [ref=e117]
+            - paragraph [ref=e118]: A shell prompt theme that keeps the same background, accent, and terminal mood.
+            - paragraph [ref=e119]:
+              - link "Open package" [ref=e120] [cursor=pointer]:
+                - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/oh-my-posh
+          - article [ref=e121]:
+            - generic [ref=e123]: Port
+            - heading "WezTerm" [level=3] [ref=e124]
+            - paragraph [ref=e125]: A matching terminal palette for users who want the Peachy identity everywhere.
+            - paragraph [ref=e126]:
+              - link "Open package" [ref=e127] [cursor=pointer]:
+                - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/wezterm
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - paragraph [ref=e130]: Install
+          - heading "Guides for each port." [level=2] [ref=e131]
+        - generic [ref=e132]:
+          - article [ref=e133]:
+            - generic [ref=e135]: Marketplace
+            - heading "VS Code" [level=3] [ref=e136]
+            - paragraph [ref=e137]: Install the flagship extension from the Marketplace or package it locally for release testing.
+            - code [ref=e140]: "Marketplace: https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes&ssr=false#overview Local check: npm run check"
+          - article [ref=e141]:
+            - generic [ref=e143]: Drop-in module
+            - heading "LazyVim" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Use the module as a Peachy colorscheme entry point while the standalone repo/export continues to grow.
+            - code [ref=e148]: require("peachy").setup() vim.cmd.colorscheme("peachy")
+          - article [ref=e149]:
+            - generic [ref=e151]: Theme file
+            - heading "Oh My Posh" [level=3] [ref=e152]
+            - paragraph [ref=e153]: Point Oh My Posh to the Peachy config file locally or from a raw GitHub URL.
+            - code [ref=e156]: oh-my-posh init pwsh --config ~/themes/peachy.omp.json | Invoke-Expression oh-my-posh init bash --config ~/themes/peachy.omp.json
+          - article [ref=e157]:
+            - generic [ref=e159]: Palette
+            - heading "WezTerm" [level=3] [ref=e160]
+            - paragraph [ref=e161]: Copy the Peachy Lua palette into your WezTerm config and reference it as a custom color scheme.
+            - code [ref=e164]: "local colors = require(\"peachy\") return { color_schemes = { peachy = colors }, color_scheme = \"peachy\" }"
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - paragraph [ref=e167]: Theme ports
+          - heading "What is ready and what is still growing." [level=2] [ref=e168]
+        - generic [ref=e169]:
+          - article [ref=e170]:
+            - generic [ref=e172]: Ready
+            - heading "VS Code" [level=3] [ref=e173]
+            - paragraph [ref=e174]: Complete theme package with manifest, icon, docs, and release workflow support.
+          - article [ref=e175]:
+            - generic [ref=e177]: Growing
+            - heading "LazyVim" [level=3] [ref=e178]
+            - paragraph [ref=e179]: Good highlight coverage for core UI, diagnostics, and Tree-sitter groups.
+          - article [ref=e180]:
+            - generic [ref=e182]: Growing
+            - heading "Oh My Posh" [level=3] [ref=e183]
+            - paragraph [ref=e184]: Prompt segments are present and ready to expand as release needs change.
+          - article [ref=e185]:
+            - generic [ref=e187]: Starter
+            - heading "WezTerm" [level=3] [ref=e188]
+            - paragraph [ref=e189]: A shared terminal palette is in place and can be promoted to a fuller package later.
+          - article [ref=e190]:
+            - generic [ref=e192]: Core
+            - heading "Tokens" [level=3] [ref=e193]
+            - paragraph [ref=e194]: The token package keeps colors, roles, and generator outputs aligned.
+          - article [ref=e195]:
+            - generic [ref=e197]: Ready
+            - heading "Docs Site" [level=3] [ref=e198]
+            - paragraph [ref=e199]: A docs-first showcase page that explains the repo structure and release flow.
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - paragraph [ref=e202]: Release flow
+          - heading "How we ship updates." [level=2] [ref=e203]
+        - generic [ref=e204]:
+          - article [ref=e205]:
+            - heading "Generate" [level=3] [ref=e206]
+            - paragraph [ref=e207]: "Run `npm run generate` to refresh shared CSS and JSON outputs."
+          - article [ref=e208]:
+            - heading "Validate" [level=3] [ref=e209]
+            - paragraph [ref=e210]: "Run `npm run check` to verify generated assets, JSON, and contrast ratios."
+          - article [ref=e211]:
+            - heading "Tag" [level=3] [ref=e212]
+            - paragraph [ref=e213]: "Create a semver tag like `v0.1.0` once the package looks right."
+          - article [ref=e214]:
+            - heading "Package" [level=3] [ref=e215]
+            - paragraph [ref=e216]: "GitHub Actions builds the `.vsix` and release tarballs for the other ports."
+          - article [ref=e217]:
+            - heading "Publish" [level=3] [ref=e218]
+            - paragraph [ref=e219]: "If the VS Code publisher account is available and `VSCE_PAT` exists, the release workflow can publish the extension."
+        - paragraph [ref=e221]: "The release workflow packages the VS Code extension, builds tarballs for the other ports, and can publish to the Marketplace when a valid `VSCE_PAT` secret exists and the publisher account is recoverable."
+      - generic [ref=e222]:
+        - generic [ref=e223]:
+          - paragraph [ref=e224]: Palette
+          - heading "The Peachy core." [level=2] [ref=e225]
+        - generic [ref=e226]:
+          - article [ref=e227]:
+            - generic [ref=e229]:
+              - strong [ref=e230]: Base 950
+              - text: "#202330"
+          - article [ref=e231]:
+            - generic [ref=e233]:
+              - strong [ref=e234]: Base 900
+              - text: "#2d2f42"
+          - article [ref=e235]:
+            - generic [ref=e237]:
+              - strong [ref=e238]: Base 800
+              - text: "#472541"
+          - article [ref=e239]:
+            - generic [ref=e241]:
+              - strong [ref=e242]: Peach 500
+              - text: "#ff928b"
+          - article [ref=e243]:
+            - generic [ref=e245]:
+              - strong [ref=e246]: Rose 500
+              - text: "#fe7c8e"
+          - article [ref=e247]:
+            - generic [ref=e249]:
+              - strong [ref=e250]: Soft Pink
+              - text: "#fec3d6"
+          - article [ref=e251]:
+            - generic [ref=e253]:
+              - strong [ref=e254]: Cream
+              - text: "#efe9ae"
+          - article [ref=e255]:
+            - generic [ref=e257]:
+              - strong [ref=e258]: Mint
+              - text: "#cdeac0"
+          - article [ref=e259]:
+            - generic [ref=e261]:
+              - strong [ref=e262]: Comment Green
+              - text: "#729760"
+          - article [ref=e263]:
+            - generic [ref=e265]:
+              - strong [ref=e266]: Melon
+              - text: "#ffac81"
+          - article [ref=e267]:
+            - generic [ref=e269]:
+              - strong [ref=e270]: Danger
+              - text: "#ff62a5"
+          - article [ref=e271]:
+            - generic [ref=e273]:
+              - strong [ref=e274]: Success
+              - text: "#3bc089"
+      - generic [ref=e275]:
+        - generic [ref=e276]:
+          - paragraph [ref=e277]: Resources
+          - heading "Where to read next." [level=2] [ref=e278]
+        - generic [ref=e279]:
+          - link "Root README The top-level project overview and workspace map." [ref=e280] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/blob/main/README.md
+            - heading "Root README" [level=3] [ref=e281]
+            - paragraph [ref=e282]: The top-level project overview and workspace map.
+          - link "VS Code package Manifest, docs, examples, and package metadata." [ref=e283] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/vscode-theme
+            - heading "VS Code package" [level=3] [ref=e284]
+            - paragraph [ref=e285]: Manifest, docs, examples, and package metadata.
+          - link "LazyVim package The Neovim colorscheme module and supporting README." [ref=e286] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/lazyvim
+            - heading "LazyVim package" [level=3] [ref=e287]
+            - paragraph [ref=e288]: The Neovim colorscheme module and supporting README.
+          - link "Oh My Posh package Prompt theme and usage notes." [ref=e289] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/oh-my-posh
+            - heading "Oh My Posh package" [level=3] [ref=e290]
+            - paragraph [ref=e291]: Prompt theme and usage notes.
+          - link "WezTerm palette The terminal color scheme table." [ref=e292] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/wezterm
+            - heading "WezTerm palette" [level=3] [ref=e293]
+            - paragraph [ref=e294]: The terminal color scheme table.
+          - link "Release workflow The GitHub Actions pipeline that packages and publishes releases." [ref=e295] [cursor=pointer]:
+            - /url: https://github.com/Touutae-labs/Peachy-themes/blob/main/.github/workflows/release.yml
+            - heading "Release workflow" [level=3] [ref=e296]
+            - paragraph [ref=e297]: The GitHub Actions pipeline that packages and publishes releases.
+          - link "Deep docs Detailed installation, token, generator, and contribution notes." [ref=e298] [cursor=pointer]:
+            - /url: ./docs.html
+            - heading "Deep docs" [level=3] [ref=e299]
+            - paragraph [ref=e300]: Detailed installation, token, generator, and contribution notes.
+  - contentinfo [ref=e301]:
+    - paragraph [ref=e302]: Peachy Collection is tuned to stay soft, readable, and easy to extend across editors and terminal tools.

@@ -30,3 +30,25 @@ jobs:
         run: |
           node --check apps/site/script.js
           node --check apps/playground/script.js
+
+      - name: Check all expected files exist
+        run: |
+          for f in \
+            apps/index.html \
+            apps/404.html \
+            apps/_redirects \
+            apps/robots.txt \
+            apps/sitemap.xml \
+            apps/site/index.html \
+            apps/site/docs.html \
+            apps/site/palette.html \
+            apps/site/styles.css \
+            apps/site/docs.css \
+            apps/site/palette.css \
+            apps/site/script.js \
+            apps/playground/index.html \
+            apps/playground/styles.css \
+            apps/playground/script.js; do
+            [ -f "$f" ] || { echo "MISSING: $f"; exit 1; }
+          done
+          echo "All site files present."

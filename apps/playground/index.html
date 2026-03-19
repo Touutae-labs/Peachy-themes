@@ -9,11 +9,7 @@
       content="Preview Peachy theme colors against multiple language samples."
     />
     <meta name="theme-color" content="#202330" />
-    <link rel="canonical" href="https://peachytheme.party/playground/" />
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://peachytheme.party/playground/" />
     <meta property="og:title" content="Peachy Playground — Preview the palette" />
     <meta property="og:description" content="Preview Peachy theme colors against multiple language samples." />
     <meta property="og:site_name" content="Peachy Collection" />
@@ -42,10 +38,32 @@
           Use this page when you tweak Peachy tokens or syntax colors. It keeps the theme honest across different code styles instead of only one screenshot.
         </p>
         <div class="actions">
-          <a href="../site/index.html">Back to Site</a>
-          <a href="https://github.com/Touutae-labs/Peachy-themes">Repo</a>
+          <a href="../site/index.html">Home</a>
+          <a href="../site/docs.html">Docs</a>
+          <a href="../site/palette.html">Palette</a>
+          <a href="https://github.com/Touutae-labs/Peachy-themes">GitHub</a>
+          <a href="#checklist">Review Checklist</a>
         </div>
       </header>
+
+      <section class="checklist" id="checklist">
+        <article class="check-card">
+          <h2>Contrast</h2>
+          <p>Check body text, comments, and sidebar-like surfaces first. A cute palette only works if it stays readable for long sessions.</p>
+        </article>
+        <article class="check-card">
+          <h2>Syntax balance</h2>
+          <p>Make sure keywords, strings, functions, and types are distinct without turning every file into confetti.</p>
+        </article>
+        <article class="check-card">
+          <h2>UI parity</h2>
+          <p>Compare editor colors with terminal, prompt, and docs surfaces so the collection still feels like one family.</p>
+        </article>
+        <article class="check-card">
+          <h2>Release readiness</h2>
+          <p>Run <span class="token inline-code">npm run check</span>, refresh generated assets, and review a few screenshots before tagging.</p>
+        </article>
+      </section>
 
       <section class="samples">
         <article class="sample-card">
@@ -86,6 +104,35 @@ Use <span class="token inline-code">npm run check</span> after changing colors.<
     <span class="token keyword">for</span> <span class="token variable">item</span> <span class="token keyword">in</span> <span class="token variable">items</span>:
         <span class="token function">print</span>(<span class="token string">f"theme: {item}"</span>)</code></pre>
         </article>
+
+        <article class="sample-card">
+          <h2>HTML + CSS</h2>
+          <pre><code><span class="token keyword">&lt;section</span> <span class="token property">class</span>=<span class="token string">"peachy-card"</span><span class="token keyword">&gt;</span>
+  <span class="token keyword">&lt;h2&gt;</span><span class="token variable">Theme ports</span><span class="token keyword">&lt;/h2&gt;</span>
+<span class="token keyword">&lt;/section&gt;</span>
+
+<span class="token property">.peachy-card</span> {
+  <span class="token property">background</span>: <span class="token string">#202330</span>;
+  <span class="token property">border</span>: <span class="token string">1px solid #fec3d6</span>;
+}</code></pre>
+        </article>
+
+        <article class="sample-card">
+          <h2>Shell + Release</h2>
+          <pre><code><span class="token function">npm</span> <span class="token variable">run</span> <span class="token string">check</span>
+<span class="token function">git</span> <span class="token variable">tag</span> <span class="token string">v0.1.0</span>
+<span class="token function">git</span> <span class="token variable">push</span> <span class="token variable">origin</span> <span class="token string">main --tags</span></code></pre>
+        </article>
+      </section>
+
+      <section class="ports">
+        <h2>Ports to compare before release</h2>
+        <div class="port-grid">
+          <a class="port-card" href="../site/index.html#packages">VS Code package</a>
+          <a class="port-card" href="../site/index.html#install">Publish flow</a>
+          <a class="port-card" href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/lazyvim">LazyVim package</a>
+          <a class="port-card" href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/oh-my-posh">Oh My Posh package</a>
+        </div>
       </section>
 
       <section class="palette">

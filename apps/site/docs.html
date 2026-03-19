@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs — Peachy Collection</title>
+    <meta
+      name="description"
+      content="Installation guides for Peachy themes across VS Code, LazyVim, Oh My Posh, WezTerm, and design tokens."
+    />
+    <meta name="theme-color" content="#202330" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Docs — Peachy Collection" />
+    <meta property="og:description" content="Installation guides for every Peachy theme." />
+    <meta property="og:site_name" content="Peachy Collection" />
+    <meta property="og:image" content="./assets/peachy-social-card.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Docs — Peachy Collection" />
+    <meta name="twitter:description" content="Installation guides for every Peachy theme." />
+    <meta name="twitter:image" content="./assets/peachy-social-card.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./generated/tokens.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./docs.css" />
+  </head>
+  <body>
+    <div class="backdrop backdrop-a"></div>
+    <div class="backdrop backdrop-b"></div>
+
+    <header class="hero">
+      <nav class="nav">
+        <a class="brand" href="./index.html">
+          <img class="brand-icon" src="./assets/peachy-mark.svg" alt="Peachy logo" />
+          <div class="brand-copy">
+            <span class="brand-mark">Peachy</span>
+            <span class="brand-subtitle">Collection</span>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./docs.html" class="nav-active">Docs</a>
+          <a href="./palette.html">Palette</a>
+          <a href="../playground/index.html">Playground</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="docs-main">
+      <aside class="docs-sidebar">
+        <p class="sidebar-label">Guides</p>
+        <ul>
+          <li><a href="#getting-started">Getting Started</a></li>
+          <li><a href="#vscode">VS Code</a></li>
+          <li><a href="#lazyvim">LazyVim</a></li>
+          <li><a href="#oh-my-posh">Oh My Posh</a></li>
+          <li><a href="#wezterm">WezTerm</a></li>
+          <li><a href="#tokens">Design Tokens</a></li>
+          <li><a href="#generator">Generator</a></li>
+          <li><a href="#contributing">Contributing</a></li>
+        </ul>
+      </aside>
+
+      <div class="docs-content">
+        <section id="getting-started">
+          <p class="eyebrow">Overview</p>
+          <h1>Getting Started</h1>
+          <p class="doc-intro">
+            Peachy Collection is a family of themes that share a single, consistent color palette
+            across your entire development environment. Start with one tool and expand to others whenever you're ready.
+          </p>
+          <div class="doc-cards">
+            <a class="doc-card" href="#vscode">
+              <h3>VS Code</h3>
+              <p>The flagship theme with full syntax and UI coverage.</p>
+              <span class="doc-badge">Marketplace</span>
+            </a>
+            <a class="doc-card" href="#lazyvim">
+              <h3>LazyVim</h3>
+              <p>Neovim colorscheme for LazyVim and any Lua-based config.</p>
+              <span class="doc-badge">Lua</span>
+            </a>
+            <a class="doc-card" href="#oh-my-posh">
+              <h3>Oh My Posh</h3>
+              <p>Shell prompt that matches your editor palette.</p>
+              <span class="doc-badge">JSON config</span>
+            </a>
+            <a class="doc-card" href="#wezterm">
+              <h3>WezTerm</h3>
+              <p>Terminal color scheme with tab bar styling.</p>
+              <span class="doc-badge">Lua</span>
+            </a>
+          </div>
+
+          <h2>Clone the repo</h2>
+          <pre class="code-block"><code><span class="t-comment"># Clone the collection</span>
+<span class="t-keyword">git</span> clone https://github.com/Touutae-labs/Peachy-themes.git
+<span class="t-keyword">cd</span> Peachy-themes
+
+<span class="t-comment"># Generate shared assets (tokens → CSS, JS, JSON)</span>
+<span class="t-keyword">npm</span> run generate
+
+<span class="t-comment"># Run the full validation suite</span>
+<span class="t-keyword">npm</span> run check</code></pre>
+        </section>
+
+        <section id="vscode">
+          <p class="eyebrow">Editor</p>
+          <h2>VS Code</h2>
+          <p>The original Peachy theme — a warm dark theme with soft pinks, creamy highlights, and minty keywords.</p>
+
+          <h3>Install from Marketplace</h3>
+          <pre class="code-block"><code><span class="t-comment"># Option 1: VS Code Quick Open (Ctrl+P / Cmd+P)</span>
+ext install Piros-k.peachy-themes
+
+<span class="t-comment"># Option 2: Command line</span>
+<span class="t-keyword">code</span> --install-extension Piros-k.peachy-themes</code></pre>
+          <p>Or search <strong>"Peachy Themes"</strong> in the Extensions sidebar.</p>
+
+          <h3>Activate</h3>
+          <p>Open the Command Palette (<code>Ctrl+Shift+P</code> / <code>Cmd+Shift+P</code>), search <code>Color Theme</code>, and select <strong>Peachy Themes</strong>.</p>
+
+          <h3>What's covered</h3>
+          <ul class="doc-list">
+            <li>WorkBench UI surfaces such as editor, sidebar, tabs, notifications, and terminal</li>
+            <li>Language-aware syntax rules for JavaScript, TypeScript, JSON, Markdown, Python, shell, Rust, Go, and more</li>
+            <li>Semantic highlighting for classes, decorators, enums, interfaces, and related symbol types</li>
+          </ul>
+
+          <div class="doc-link-row">
+            <a class="button secondary" href="https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes">View on Marketplace</a>
+            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/vscode-theme">Source on GitHub</a>
+          </div>
+        </section>
+
+        <section id="lazyvim">
+          <p class="eyebrow">Editor</p>
+          <h2>LazyVim / Neovim</h2>
+          <p>A Lua colorscheme for Neovim with coverage for core UI groups, Tree-sitter scopes, diagnostics, and git signs.</p>
+
+          <h3>Install</h3>
+          <p>Copy the theme into your Neovim config:</p>
+          <pre class="code-block"><code><span class="t-comment">-- Copy the folder into your config</span>
+<span class="t-keyword">cp</span> -r packages/lazyvim/lua/peachy ~/.config/nvim/lua/
+
+<span class="t-comment">-- Then in your init.lua or LazyVim config:</span>
+<span class="t-function">require</span>(<span class="t-string">"peachy"</span>)</code></pre>
+
+          <h3>What's covered</h3>
+          <ul class="doc-list">
+            <li>Normal, Float, Cursor, Search, Visual highlight groups</li>
+            <li>Full Treesitter scopes (@property, @tag, @function, @keyword…)</li>
+            <li>LSP diagnostics (Error, Warn, Info, Hint)</li>
+            <li>Git signs and diff colors</li>
+            <li>Pmenu, TabLine, StatusLine</li>
+          </ul>
+
+          <div class="doc-link-row">
+            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/lazyvim">Source on GitHub</a>
+          </div>
+        </section>
+
+        <section id="oh-my-posh">
+          <p class="eyebrow">Terminal</p>
+          <h2>Oh My Posh</h2>
+          <p>A prompt theme with segments for session, path, git, and Node.js — all using the Peachy palette.</p>
+
+          <h3>Install</h3>
+          <pre class="code-block"><code><span class="t-comment"># Copy the config file</span>
+<span class="t-keyword">cp</span> packages/oh-my-posh/peachy.omp.json ~/.config/
+
+<span class="t-comment"># Add to your shell profile (.bashrc, .zshrc, etc.)</span>
+<span class="t-keyword">eval</span> <span class="t-string">"$(oh-my-posh init zsh --config ~/.config/peachy.omp.json)"</span></code></pre>
+
+          <h3>Segments</h3>
+          <ul class="doc-list">
+            <li><strong>Session</strong> — username on peach background</li>
+            <li><strong>Path</strong> — current directory with folder icon</li>
+            <li><strong>Git</strong> — branch name on cream background</li>
+            <li><strong>Node</strong> — Node.js version on mint background</li>
+            <li><strong>Execution time</strong> — right-aligned, soft foreground</li>
+            <li><strong>Exit status</strong> — right-aligned, rose on error</li>
+          </ul>
+
+          <div class="doc-link-row">
+            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/oh-my-posh">Source on GitHub</a>
+          </div>
+        </section>
+
+        <section id="wezterm">
+          <p class="eyebrow">Terminal</p>
+          <h2>WezTerm</h2>
+          <p>A complete terminal color scheme including ANSI colors, tab bar styling, and selection highlights.</p>
+
+          <h3>Install</h3>
+          <pre class="code-block"><code><span class="t-comment">-- In your wezterm.lua, load the palette:</span>
+<span class="t-keyword">local</span> peachy = <span class="t-function">dofile</span>(
+  <span class="t-function">os.getenv</span>(<span class="t-string">"HOME"</span>) .. <span class="t-string">"/.config/wezterm/peachy.lua"</span>
+)
+
+<span class="t-keyword">return</span> {
+  <span class="t-property">colors</span> = peachy,
+}</code></pre>
+
+          <h3>What's covered</h3>
+          <ul class="doc-list">
+            <li>Foreground, background, cursor, and selection colors</li>
+            <li>8 standard + 8 bright ANSI colors</li>
+            <li>Indexed colors for melon and soft accents</li>
+            <li>Tab bar colors (active, inactive, hover)</li>
+            <li>Copy mode and quick select mode highlights</li>
+          </ul>
+
+          <div class="doc-link-row">
+            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/wezterm">Source on GitHub</a>
+          </div>
+        </section>
+
+        <section id="tokens">
+          <p class="eyebrow">System</p>
+          <h2>Design Tokens</h2>
+          <p>The single source of truth for the entire Peachy palette. Every theme and app is derived from this one file.</p>
+
+          <h3>Structure</h3>
+          <pre class="code-block"><code><span class="t-comment">// packages/tokens/peachy.tokens.json</span>
+{
+  <span class="t-property">"name"</span>: <span class="t-string">"Peachy"</span>,
+  <span class="t-property">"colors"</span>: {
+    <span class="t-property">"peach.500"</span>: <span class="t-string">"#ff928b"</span>,
+    <span class="t-property">"cream.300"</span>: <span class="t-string">"#efe9ae"</span>,
+    <span class="t-property">"mint.300"</span>: <span class="t-string">"#cdeac0"</span>,
+    <span class="t-comment">// ... 19 colors total</span>
+  },
+  <span class="t-property">"roles"</span>: {
+    <span class="t-property">"accent.primary"</span>: <span class="t-string">"peach.500"</span>,
+    <span class="t-property">"accent.syntax.keyword"</span>: <span class="t-string">"mint.300"</span>,
+    <span class="t-comment">// ... semantic role mappings</span>
+  }
+}</code></pre>
+
+          <h3>Generated outputs</h3>
+          <ul class="doc-list">
+            <li><code>peachy.json</code> — JSON for programmatic use</li>
+            <li><code>peachy.css</code> — CSS custom properties (<code>:root { --peach: #ff928b; }</code>)</li>
+            <li><code>palette.js</code> — Browser-ready JS object for the site and playground</li>
+          </ul>
+
+          <div class="doc-link-row">
+            <a class="button secondary" href="./palette.html">View Full Palette</a>
+            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes/tree/main/packages/tokens">Source on GitHub</a>
+          </div>
+        </section>
+
+        <section id="generator">
+          <p class="eyebrow">System</p>
+          <h2>Generator</h2>
+          <p>The build script that reads tokens and produces all shared assets.</p>
+
+          <pre class="code-block"><code><span class="t-comment"># Generate all shared assets</span>
+<span class="t-keyword">npm</span> run generate
+
+<span class="t-comment"># Check that generated files are up-to-date (CI uses this)</span>
+<span class="t-keyword">npm</span> run generate:check
+
+<span class="t-comment"># Full validation: generate + validate JSON + audit contrast</span>
+<span class="t-keyword">npm</span> run check</code></pre>
+
+          <h3>What it produces</h3>
+          <ul class="doc-list">
+            <li><code>packages/tokens/dist/peachy.json</code> + <code>peachy.css</code></li>
+            <li><code>apps/site/generated/tokens.css</code> + <code>palette.js</code></li>
+            <li><code>apps/playground/generated/tokens.css</code> + <code>palette.js</code></li>
+          </ul>
+        </section>
+
+        <section id="contributing">
+          <p class="eyebrow">Community</p>
+          <h2>Contributing</h2>
+          <p>Peachy Collection is open source. Here's how to contribute:</p>
+
+          <h3>Adding or adjusting colors</h3>
+          <ol class="doc-list">
+            <li>Edit <code>packages/tokens/peachy.tokens.json</code></li>
+            <li>Run <code>npm run generate</code> to propagate changes</li>
+            <li>Run <code>npm run check</code> to validate contrast ratios</li>
+            <li>Open a pull request and use the GitHub Actions preview artifact for review</li>
+          </ol>
+
+          <h3>Adding a new port</h3>
+          <ol class="doc-list">
+            <li>Create a new folder under <code>packages/</code></li>
+            <li>Import colors from the generated token files</li>
+            <li>Add validation to the CI workflow if applicable</li>
+            <li>Document the install steps in the docs page</li>
+          </ol>
+
+          <div class="doc-link-row">
+            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes/issues">Open an Issue</a>
+            <a class="button secondary" href="https://github.com/Touutae-labs/Peachy-themes/discussions">Discussions</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made with warmth by <a href="https://github.com/Touutae-labs">Touutae Labs</a></p>
+      <p class="footer-links">
+        <a href="https://github.com/Touutae-labs/Peachy-themes">GitHub</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes">VS Code Marketplace</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,5 +1,8 @@
 :root {
   --shadow: 0 20px 80px rgba(16, 18, 30, 0.4);
+  --panel-border: rgba(254, 195, 214, 0.15);
+  --panel-bg: rgba(45, 47, 66, 0.92);
+  --panel-bg-strong: rgba(32, 35, 48, 0.96);
 }
 
 * {
@@ -26,9 +29,23 @@ a {
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 20;
+  padding: 0.8rem 1rem;
+  background: var(--soft);
+  color: #1c1320;
+  border-radius: 999px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 .backdrop {
   position: fixed;
-  inset: auto;
   width: 24rem;
   height: 24rem;
   border-radius: 999px;
@@ -50,13 +67,14 @@ a {
 }
 
 .hero,
-.section {
-  width: min(1120px, calc(100% - 2rem));
+.docs-layout,
+.footer {
+  width: min(1200px, calc(100% - 2rem));
   margin: 0 auto;
 }
 
 .hero {
-  padding: 1.4rem 0 4rem;
+  padding: 1.4rem 0 3rem;
 }
 
 .nav {
@@ -66,7 +84,7 @@ a {
   gap: 1rem;
   padding: 0.8rem 1rem;
   background: rgba(45, 47, 66, 0.55);
-  border: 1px solid rgba(254, 195, 214, 0.15);
+  border: 1px solid var(--panel-border);
   border-radius: 999px;
   backdrop-filter: blur(18px);
 }
@@ -104,7 +122,8 @@ h3 {
 
 .brand-subtitle,
 .nav-links a,
-.eyebrow {
+.eyebrow,
+.toc-title {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -112,8 +131,16 @@ h3 {
 
 .nav-links {
   display: flex;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
   color: var(--muted);
+}
+
+.nav-links a:hover,
+.nav-links .nav-active,
+.toc-card a:hover,
+.resource-card:hover {
+  color: var(--soft);
 }
 
 .hero-grid {
@@ -121,7 +148,7 @@ h3 {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 2rem;
   align-items: center;
-  padding: 4rem 0 2rem;
+  padding: 4rem 0 1rem;
 }
 
 .eyebrow {
@@ -175,12 +202,43 @@ h1 {
   border: 1px solid rgba(254, 195, 214, 0.2);
 }
 
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.stat-chip,
+.toc-card,
+.info-card,
 .preview-card,
 .card,
-.terminal {
-  background: linear-gradient(180deg, rgba(45, 47, 66, 0.96), rgba(32, 35, 48, 0.94));
-  border: 1px solid rgba(254, 195, 214, 0.15);
+.install-card,
+.port-card,
+.timeline-step,
+.resource-card,
+.terminal,
+.callout {
+  background: linear-gradient(180deg, var(--panel-bg), var(--panel-bg-strong));
+  border: 1px solid var(--panel-border);
   box-shadow: var(--shadow);
+}
+
+.stat-chip {
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+}
+
+.stat-chip strong {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--soft);
+}
+
+.stat-chip span {
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .preview-card {
@@ -230,8 +288,42 @@ h1 {
   line-height: 1.7;
 }
 
+.docs-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.docs-nav {
+  position: sticky;
+  top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.toc-card {
+  border-radius: 1.35rem;
+  padding: 1rem;
+}
+
+.toc-title {
+  margin: 0 0 0.8rem;
+  color: var(--melon);
+}
+
+.toc-card a {
+  display: block;
+  padding: 0.35rem 0;
+  color: var(--muted);
+}
+
+.docs-content {
+  min-width: 0;
+}
+
 .section {
-  padding: 3rem 0;
+  padding: 0 0 3rem;
 }
 
 .section-heading {
@@ -239,7 +331,7 @@ h1 {
   justify-content: space-between;
   align-items: end;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 h2 {
@@ -247,27 +339,126 @@ h2 {
   margin: 0;
 }
 
-.card-grid {
+.overview-grid,
+.card-grid,
+.install-grid,
+.port-grid,
+.resource-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.card {
-  border-radius: 1.35rem;
-  padding: 1.2rem;
-  min-height: 12rem;
+.overview-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.card h3 {
+.card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.install-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.port-grid,
+.resource-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.info-card,
+.card,
+.install-card,
+.port-card,
+.timeline-step,
+.resource-card,
+.callout {
+  border-radius: 1.35rem;
+  padding: 1.2rem;
+}
+
+.info-card h3,
+.card h3,
+.install-card h3,
+.port-card h3,
+.timeline-step h3,
+.resource-card h3 {
   margin-top: 0;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--soft);
 }
 
-.card p {
+.info-card p,
+.card p,
+.install-card p,
+.port-card p,
+.timeline-step p,
+.resource-card p,
+.callout p {
   color: var(--muted);
   line-height: 1.65;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  background: rgba(254, 195, 214, 0.09);
+  color: var(--soft);
+}
+
+.badge.alt {
+  background: rgba(195, 234, 192, 0.1);
+  color: var(--mint);
+}
+
+.code-panel {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(24, 26, 37, 0.72);
+  border: 1px solid rgba(254, 195, 214, 0.12);
+  overflow: auto;
+}
+
+.code-panel pre,
+.code-panel code {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.timeline-step {
+  position: relative;
+}
+
+.timeline-step::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 0.25rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--peach), var(--cream));
+}
+
+.callout {
+  margin-top: 1rem;
 }
 
 .swatches {
@@ -302,37 +493,26 @@ h2 {
   font-size: 0.92rem;
 }
 
-.install-layout {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 1rem;
-  align-items: stretch;
-}
-
-.install-copy {
+.footer {
+  padding: 0 0 2rem;
   color: var(--muted);
-  line-height: 1.7;
-  padding-right: 1rem;
 }
 
-.terminal {
-  border-radius: 1.5rem;
-  padding: 1.25rem;
-  overflow: auto;
-}
-
-.terminal pre {
-  margin: 0;
-  color: var(--mint);
-  line-height: 1.7;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .hero-grid,
-  .install-layout,
+  .docs-layout,
+  .overview-grid,
   .card-grid,
+  .install-grid,
+  .port-grid,
+  .resource-grid,
+  .timeline,
   .swatches {
     grid-template-columns: 1fr;
+  }
+
+  .docs-nav {
+    position: static;
   }
 
   .nav {

@@ -1,24 +1,5 @@
-name: Preview Site Artifact
-
-on:
-  pull_request:
-
-jobs:
-  preview:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Generate shared assets
-        run: npm run generate
-
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: peachy-site-preview
-          path: apps
+# =============================================================
+# DEPRECATED — Cloudflare Pages creates preview URLs for PRs automatically
+# =============================================================
+# Keeping this file for git history. Preview deployments now happen
+# via deploy-cloudflare.yml on pull_request events.
