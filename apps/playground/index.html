@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peachy Playground</title>
+    <meta
+      name="description"
+      content="Preview Peachy theme colors against multiple language samples."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./generated/tokens.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">Peachy Playground</p>
+        <h1>Preview the palette against real language samples.</h1>
+        <p class="lede">
+          Use this page when you tweak Peachy tokens or syntax colors. It keeps the theme honest across different code styles instead of only one screenshot.
+        </p>
+        <div class="actions">
+          <a href="../site/index.html">Back to Site</a>
+          <a href="https://github.com/Touutae-labs/Peachy-themes">Repo</a>
+        </div>
+      </header>
+
+      <section class="samples">
+        <article class="sample-card">
+          <h2>TypeScript</h2>
+          <pre><code><span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">sweetenTheme</span>(
+  <span class="token parameter">themeName</span>: <span class="token type">string</span>
+) {
+  <span class="token keyword">const</span> <span class="token variable">tokens</span> = {
+    <span class="token property">background</span>: <span class="token string">"#202330"</span>,
+    <span class="token property">accent</span>: <span class="token string">"#ff928b"</span>
+  }
+
+  <span class="token keyword">return</span> <span class="token function">buildTheme</span>(<span class="token variable">themeName</span>, <span class="token variable">tokens</span>)
+}</code></pre>
+        </article>
+
+        <article class="sample-card">
+          <h2>JSON</h2>
+          <pre><code>{
+  <span class="token property">"name"</span>: <span class="token string">"peachy-themes"</span>,
+  <span class="token property">"semanticHighlighting"</span>: <span class="token constant">true</span>,
+  <span class="token property">"version"</span>: <span class="token number">"0.1.0"</span>
+}</code></pre>
+        </article>
+
+        <article class="sample-card">
+          <h2>Markdown</h2>
+          <pre><code><span class="token heading">## Peachy Notes</span>
+
+<span class="token quote">&gt; Keep the theme soft, warm, and readable.</span>
+
+Use <span class="token inline-code">npm run check</span> after changing colors.</code></pre>
+        </article>
+
+        <article class="sample-card">
+          <h2>Python</h2>
+          <pre><code><span class="token keyword">def</span> <span class="token function">peachy_report</span>(<span class="token parameter">items</span>: <span class="token type">list</span>[<span class="token type">str</span>]) -> <span class="token type">None</span>:
+    <span class="token keyword">for</span> <span class="token variable">item</span> <span class="token keyword">in</span> <span class="token variable">items</span>:
+        <span class="token function">print</span>(<span class="token string">f"theme: {item}"</span>)</code></pre>
+        </article>
+      </section>
+
+      <section class="palette">
+        <h2>Palette</h2>
+        <div class="swatches" id="swatches"></div>
+      </section>
+    </main>
+
+    <script src="./generated/palette.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

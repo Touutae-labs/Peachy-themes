@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check generated assets
+        run: npm run generate:check
+
+      - name: Validate JSON files
+        run: npm run validate:json
+
+      - name: Audit theme contrast
+        run: npm run color:audit
+
+      - name: Validate site scripts
+        run: |
+          node --check apps/site/script.js
+          node --check apps/playground/script.js

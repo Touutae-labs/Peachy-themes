@@ -1,21 +1,17 @@
 {
-    "name": "peachy-themes",
-    "displayName": "Peachy Themes",
-    "description": "This exention inspired by Pink Cat boo  Sweet theme",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.67.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Peachy Themes",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Peachy Themes-color-theme.json"
-            }
-        ]
-    }
+  "name": "peachy-collection",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Peachy Collection is a growing family of Peachy-styled themes for editors, terminals, prompts, and the web.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "generate": "node packages/generator/build.mjs",
+    "generate:check": "node packages/generator/build.mjs --check",
+    "color:audit": "node scripts/color-audit.mjs",
+    "validate:json": "node scripts/validate-json.mjs",
+    "check": "npm run generate:check && npm run validate:json && npm run color:audit"
+  }
 }

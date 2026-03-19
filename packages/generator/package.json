@@ -1,0 +1,6 @@
+{
+  "name": "@peachy/generator",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Build scripts that generate Peachy assets from shared tokens."
+}

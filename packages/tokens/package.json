@@ -1,0 +1,6 @@
+{
+  "name": "@peachy/tokens",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Source-of-truth design tokens for the Peachy Collection."
+}

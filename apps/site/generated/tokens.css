@@ -1,0 +1,19 @@
+:root {
+  --bg: #202330;
+  --panel: #2d2f42;
+  --panel-2: #472541;
+  --panel-3: #6d5d72;
+  --text: #fff8f8;
+  --muted: #f3b4bf;
+  --muted-2: #9b9999;
+  --peach: #ff928b;
+  --rose: #fe7c8e;
+  --soft: #fec3d6;
+  --melon: #ffac81;
+  --cream: #efe9ae;
+  --mint: #cdeac0;
+  --comment: #729760;
+  --danger: #ff62a5;
+  --success: #3bc089;
+  --cyan: #bde8db;
+}
