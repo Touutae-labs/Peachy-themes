@@ -1,7 +1,7 @@
 {
   "name": "peachy-collection",
   "private": true,
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Peachy Collection is a growing family of Peachy-styled themes for editors, terminals, prompts, and the web.",
   "workspaces": [
     "apps/*",
