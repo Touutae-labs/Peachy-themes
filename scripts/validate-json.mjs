@@ -10,7 +10,8 @@ const files = [
   "packages/vscode-theme/themes/Peachy Pink-color-theme.json",
   "packages/vscode-theme/themes/Peachy Peach-color-theme.json",
   "packages/vscode-theme/examples/peachy-language-settings.json",
-  "packages/oh-my-posh/peachy.omp.json"
+  "packages/oh-my-posh/peach.omp.json",
+  "packages/oh-my-posh/pink.omp.json"
 ];
 
 for (const relative of files) {

@@ -1,8 +1,8 @@
 const heroStats = [
   ["6", "packages in the collection"],
-  ["1", "shared token source"],
-  ["4", "theme ports ready to grow"],
-  ["1", "docs-first release pipeline"]
+  ["2", "color variants: Pink + Peach"],
+  ["4", "themed ports across editors and terminals"],
+  ["1", "automated release pipeline"]
 ];
 
 const packageCards = [
@@ -26,20 +26,20 @@ const packageCards = [
   },
   {
     title: "LazyVim",
-    badge: "Port",
-    detail: "A Neovim colorscheme module that mirrors the Peachy syntax feel for editor users.",
+    badge: "2 variants",
+    detail: "Neovim colorscheme with Pink and Peach variants — Treesitter, diagnostics, and full UI coverage.",
     path: "packages/lazyvim"
   },
   {
     title: "Oh My Posh",
-    badge: "Port",
-    detail: "A shell prompt theme that keeps the same background, accent, and terminal mood.",
+    badge: "2 variants",
+    detail: "Shell prompt with Pink (hot pink + golden) and Peach (soft peach + cream) configs.",
     path: "packages/oh-my-posh"
   },
   {
     title: "WezTerm",
-    badge: "Port",
-    detail: "A matching terminal palette for users who want the Peachy identity everywhere.",
+    badge: "2 variants",
+    detail: "Terminal palette with Pink and Peach ANSI colors, tab bar styling, and selection highlights.",
     path: "packages/wezterm"
   }
 ];
@@ -56,29 +56,29 @@ const installGuides = [
   },
   {
     title: "LazyVim",
-    badge: "Drop-in module",
-    detail: "Use the module as a Peachy colorscheme entry point while the standalone repo/export continues to grow.",
+    badge: "2 variants",
+    detail: "Drop-in Lua module. Default is Peach; pass { variant = \"pink\" } for the legacy look.",
     code: [
-      'require("peachy").setup()',
-      'vim.cmd.colorscheme("peachy")'
+      'require("peachy").setup()              -- Peach (default)',
+      'require("peachy").setup({ variant = "pink" })  -- Pink'
     ]
   },
   {
     title: "Oh My Posh",
-    badge: "Theme file",
-    detail: "Point Oh My Posh to the Peachy config file locally or from a raw GitHub URL.",
+    badge: "2 variants",
+    detail: "Choose peach.omp.json or pink.omp.json for your preferred prompt style.",
     code: [
-      'oh-my-posh init pwsh --config ~/themes/peachy.omp.json | Invoke-Expression',
-      'oh-my-posh init bash --config ~/themes/peachy.omp.json'
+      'eval "$(oh-my-posh init zsh --config ~/.config/peach.omp.json)"',
+      '# or: eval "$(oh-my-posh init zsh --config ~/.config/pink.omp.json)"'
     ]
   },
   {
     title: "WezTerm",
-    badge: "Palette",
-    detail: "Copy the Peachy Lua palette into your WezTerm config and reference it as a custom color scheme.",
+    badge: "2 variants",
+    detail: "Copy peach.lua or pink.lua into your WezTerm config for matching terminal colors.",
     code: [
-      'local colors = require("peachy")',
-      'return { color_schemes = { peachy = colors }, color_scheme = "peachy" }'
+      'local peachy = dofile(os.getenv("HOME") .. "/.config/wezterm/peachy.lua")',
+      'return { colors = peachy }'
     ]
   }
 ];
@@ -91,18 +91,18 @@ const portCards = [
   },
   {
     title: "LazyVim",
-    badge: "Growing",
-    detail: "Good highlight coverage for core UI, diagnostics, and Tree-sitter groups."
+    badge: "Ready",
+    detail: "Two variants (Pink + Peach) with Treesitter, diagnostics, git signs, and UI highlights."
   },
   {
     title: "Oh My Posh",
-    badge: "Growing",
-    detail: "Prompt segments are present and ready to expand as release needs change."
+    badge: "Ready",
+    detail: "Two prompt configs (Pink + Peach) with session, path, git, Node.js segments."
   },
   {
     title: "WezTerm",
-    badge: "Starter",
-    detail: "A shared terminal palette is in place and can be promoted to a fuller package later."
+    badge: "Ready",
+    detail: "Two terminal palettes (Pink + Peach) with ANSI colors, tab bar, and selection styling."
   },
   {
     title: "Tokens",

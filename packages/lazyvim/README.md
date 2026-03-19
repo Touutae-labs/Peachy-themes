@@ -1,23 +1,39 @@
-# Peachy for LazyVim
+# Peachy for LazyVim / Neovim
 
-This package is a more complete Peachy colorscheme for Neovim and LazyVim.
+A Peachy colorscheme for Neovim with two variants that mirror the VS Code extension.
 
-It mirrors the same core palette used by the VS Code theme so the collection can feel related across editors.
+## Variants
 
-Included highlight coverage now includes:
-
-- core editor UI groups
-- diagnostics and diff colors
-- popup menu and tabline colors
-- Tree-sitter groups for tags, functions, types, strings, numbers, and parameters
+- **Peach** — the softer, token-based palette with calm peach strings, cream functions, and mint keywords
+- **Pink** — the original vibrant palette with hot pink keywords, golden functions, lavender types, and warm cream strings
 
 ## Usage
 
-This repo keeps the Neovim theme in-package for now. If you want a one-line `lazy.nvim` install, the cleanest path is to split this package into its own repo later or export it to a root-level plugin repository.
+Copy the Lua module into your Neovim config:
 
-For local development, use the Lua module in this package as the source of truth and copy or adapt it into your Neovim config.
+```bash
+cp -r packages/lazyvim/lua/peachy ~/.config/nvim/lua/
+```
 
-## Related docs
+Then in your `init.lua` or LazyVim config:
 
-- [Repo structure](../../docs/repo-structure.md)
-- [Brand guide](../../docs/brand.md)
+```lua
+-- Load the Peach variant (default)
+require("peachy").setup()
+
+-- Or load the Pink variant
+require("peachy").setup({ variant = "pink" })
+```
+
+## What's covered
+
+- Core editor UI: Normal, Float, Cursor, Search, Visual, StatusLine, TabLine
+- Full Treesitter scopes: @property, @tag, @function, @keyword, @string, @number, @type
+- LSP diagnostics: Error, Warn, Info, Hint (with virtual text)
+- Git signs and diff colors
+- Popup menu (Pmenu) and completion
+
+## Links
+
+- [Peachy Collection website](https://peachytheme.party)
+- [VS Code theme](../vscode-theme/)

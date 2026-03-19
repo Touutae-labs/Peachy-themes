@@ -1,22 +1,37 @@
 # Peachy Oh My Posh
 
-This is a fuller Oh My Posh theme for the Peachy Collection.
+Shell prompt theme for Oh My Posh with two variants.
 
-It now includes:
+## Variants
 
-- user/session segment
-- path segment
-- git branch and dirty state
-- Node.js version segment
-- execution time and exit status
+- **peach.omp.json** — softer peach session, cream git, mint Node.js segments
+- **pink.omp.json** — vibrant hot pink session, golden git, lavender Node.js segments
 
-The palette stays aligned with the VS Code and LazyVim ports so your prompt still feels Peachy.
+## Segments
+
+Both variants include:
+
+- **Session** — username on accent background
+- **Path** — current directory with folder icon
+- **Git** — branch name with dirty state indicator
+- **Node** — Node.js version
+- **Execution time** — right-aligned
+- **Exit status** — right-aligned, rose on error
 
 ## Usage
 
-Point Oh My Posh at `peachy.omp.json` from your shell profile or use the file as a base for a custom prompt theme.
+```bash
+# For the Peach variant
+cp packages/oh-my-posh/peach.omp.json ~/.config/
 
-## Related docs
+# Or for the Pink variant
+cp packages/oh-my-posh/pink.omp.json ~/.config/
 
-- [Brand guide](../../docs/brand.md)
-- [Publishing guide](../../docs/publishing.md)
+# Add to your shell profile (.bashrc, .zshrc, etc.)
+eval "$(oh-my-posh init zsh --config ~/.config/peach.omp.json)"
+```
+
+## Links
+
+- [Peachy Collection website](https://peachytheme.party)
+- [VS Code theme](../vscode-theme/)

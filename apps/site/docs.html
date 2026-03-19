@@ -160,15 +160,31 @@ ext install Piros-k.peachy-themes
         <section id="lazyvim">
           <p class="eyebrow">Editor</p>
           <h2>LazyVim / Neovim</h2>
-          <p>A Lua colorscheme for Neovim with coverage for core UI groups, Tree-sitter scopes, diagnostics, and git signs.</p>
+          <p>A Lua colorscheme for Neovim with two variants — matching the VS Code experience.</p>
 
           <h3>Install</h3>
           <p>Copy the theme into your Neovim config:</p>
           <pre class="code-block"><code><span class="t-comment">-- Copy the folder into your config</span>
 <span class="t-keyword">cp</span> -r packages/lazyvim/lua/peachy ~/.config/nvim/lua/
 
-<span class="t-comment">-- Then in your init.lua or LazyVim config:</span>
-<span class="t-function">require</span>(<span class="t-string">"peachy"</span>)</code></pre>
+<span class="t-comment">-- Load the Peach variant (default)</span>
+<span class="t-function">require</span>(<span class="t-string">"peachy"</span>).<span class="t-function">setup</span>()
+
+<span class="t-comment">-- Or load the Pink variant</span>
+<span class="t-function">require</span>(<span class="t-string">"peachy"</span>).<span class="t-function">setup</span>({ <span class="t-property">variant</span> = <span class="t-string">"pink"</span> })</code></pre>
+
+          <div class="doc-cards">
+            <div class="doc-card">
+              <h4>Peach</h4>
+              <p>Softer token-based palette — peach strings, cream functions, mint keywords.</p>
+              <span class="doc-badge">Default</span>
+            </div>
+            <div class="doc-card">
+              <h4>Pink</h4>
+              <p>Original vibrant palette — hot pink keywords, golden functions, lavender types.</p>
+              <span class="doc-badge">Legacy</span>
+            </div>
+          </div>
 
           <h3>What's covered</h3>
           <ul class="doc-list">
@@ -187,22 +203,38 @@ ext install Piros-k.peachy-themes
         <section id="oh-my-posh">
           <p class="eyebrow">Terminal</p>
           <h2>Oh My Posh</h2>
-          <p>A prompt theme with segments for session, path, git, and Node.js — all using the Peachy palette.</p>
+          <p>A prompt theme with segments for session, path, git, and Node.js — two variants to match your editor.</p>
 
           <h3>Install</h3>
-          <pre class="code-block"><code><span class="t-comment"># Copy the config file</span>
-<span class="t-keyword">cp</span> packages/oh-my-posh/peachy.omp.json ~/.config/
+          <pre class="code-block"><code><span class="t-comment"># Peach variant (softer palette)</span>
+<span class="t-keyword">cp</span> packages/oh-my-posh/peach.omp.json ~/.config/
+
+<span class="t-comment"># Or Pink variant (vibrant palette)</span>
+<span class="t-keyword">cp</span> packages/oh-my-posh/pink.omp.json ~/.config/
 
 <span class="t-comment"># Add to your shell profile (.bashrc, .zshrc, etc.)</span>
-<span class="t-keyword">eval</span> <span class="t-string">"$(oh-my-posh init zsh --config ~/.config/peachy.omp.json)"</span></code></pre>
+<span class="t-keyword">eval</span> <span class="t-string">"$(oh-my-posh init zsh --config ~/.config/peach.omp.json)"</span></code></pre>
+
+          <div class="doc-cards">
+            <div class="doc-card">
+              <h4>Peach</h4>
+              <p>Peach session, cream git, mint Node.js — calm and cohesive.</p>
+              <span class="doc-badge">Default</span>
+            </div>
+            <div class="doc-card">
+              <h4>Pink</h4>
+              <p>Hot pink session, golden git, lavender Node.js — energetic and bold.</p>
+              <span class="doc-badge">Legacy</span>
+            </div>
+          </div>
 
           <h3>Segments</h3>
           <ul class="doc-list">
-            <li><strong>Session</strong> — username on peach background</li>
+            <li><strong>Session</strong> — username on accent background</li>
             <li><strong>Path</strong> — current directory with folder icon</li>
-            <li><strong>Git</strong> — branch name on cream background</li>
-            <li><strong>Node</strong> — Node.js version on mint background</li>
-            <li><strong>Execution time</strong> — right-aligned, soft foreground</li>
+            <li><strong>Git</strong> — branch name with dirty state indicator</li>
+            <li><strong>Node</strong> — Node.js version</li>
+            <li><strong>Execution time</strong> — right-aligned</li>
             <li><strong>Exit status</strong> — right-aligned, rose on error</li>
           </ul>
 
@@ -214,10 +246,14 @@ ext install Piros-k.peachy-themes
         <section id="wezterm">
           <p class="eyebrow">Terminal</p>
           <h2>WezTerm</h2>
-          <p>A complete terminal color scheme including ANSI colors, tab bar styling, and selection highlights.</p>
+          <p>A complete terminal color scheme with two variants — ANSI colors, tab bar styling, and selection highlights.</p>
 
           <h3>Install</h3>
-          <pre class="code-block"><code><span class="t-comment">-- In your wezterm.lua, load the palette:</span>
+          <pre class="code-block"><code><span class="t-comment">-- Copy either peach.lua or pink.lua to your config</span>
+<span class="t-keyword">cp</span> packages/wezterm/peach.lua ~/.config/wezterm/peachy.lua
+<span class="t-comment">-- or: cp packages/wezterm/pink.lua ~/.config/wezterm/peachy.lua</span>
+
+<span class="t-comment">-- In your wezterm.lua:</span>
 <span class="t-keyword">local</span> peachy = <span class="t-function">dofile</span>(
   <span class="t-function">os.getenv</span>(<span class="t-string">"HOME"</span>) .. <span class="t-string">"/.config/wezterm/peachy.lua"</span>
 )
@@ -226,11 +262,24 @@ ext install Piros-k.peachy-themes
   <span class="t-property">colors</span> = peachy,
 }</code></pre>
 
+          <div class="doc-cards">
+            <div class="doc-card">
+              <h4>Peach</h4>
+              <p>Soft peach tabs, cream brights, mint accents — matches the Peach editor variant.</p>
+              <span class="doc-badge">Default</span>
+            </div>
+            <div class="doc-card">
+              <h4>Pink</h4>
+              <p>Hot pink tabs, golden brights, lavender accents — matches the Pink editor variant.</p>
+              <span class="doc-badge">Legacy</span>
+            </div>
+          </div>
+
           <h3>What's covered</h3>
           <ul class="doc-list">
             <li>Foreground, background, cursor, and selection colors</li>
             <li>8 standard + 8 bright ANSI colors</li>
-            <li>Indexed colors for melon and soft accents</li>
+            <li>Indexed colors for accent tones</li>
             <li>Tab bar colors (active, inactive, hover)</li>
             <li>Copy mode and quick select mode highlights</li>
           </ul>

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 3,
+  "palette": {
+    "bg": "#202330",
+    "panel": "#2d2f42",
+    "pink": "#FA508C",
+    "rose": "#fe7c8e",
+    "lavender": "#DCBFF2",
+    "golden": "#FFC85B",
+    "warmcream": "#FAE8B6",
+    "comment": "#6D7A72",
+    "text": "#fff8f8",
+    "muted": "#9b9999"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b0",
+          "foreground": "p:bg",
+          "background": "p:pink",
+          "template": " {{ .UserName }} "
+        },
+        {
+          "type": "path",
+          "style": "diamond",
+          "foreground": "p:text",
+          "background": "p:panel",
+          "powerline_symbol": "\ue0b0",
+          "template": " \ue5ff {{ .Path }} "
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "foreground": "p:bg",
+          "background": "p:golden",
+          "powerline_symbol": "\ue0b0",
+          "template": " \ue0a0 {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} "
+        },
+        {
+          "type": "node",
+          "style": "diamond",
+          "foreground": "p:bg",
+          "background": "p:lavender",
+          "powerline_symbol": "\ue0b0",
+          "template": " \ue718 {{ .Full }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": "{{ .FormattedMs }}"
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "p:rose",
+          "template": " {{ if gt .Code 0 }}exit {{ .Code }}{{ end }}"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:pink",
+          "template": "❯ "
+        }
+      ]
+    }
+  ],
+  "final_space": true
+}
