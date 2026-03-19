@@ -38,6 +38,11 @@ jobs:
           mkdir -p ../../release
           vsce package --out ../../release/peachy-themes.vsix
 
+      - name: Publish VS Code extension
+        if: ${{ secrets.VSCE_PAT != '' }}
+        working-directory: packages/vscode-theme
+        run: vsce publish -p ${{ secrets.VSCE_PAT }}
+
       - name: Package theme assets
         run: |
           mkdir -p release

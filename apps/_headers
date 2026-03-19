@@ -1,0 +1,20 @@
+# Cloudflare Pages custom headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/site/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/site/generated/*
+  Cache-Control: public, max-age=86400
+
+/playground/generated/*
+  Cache-Control: public, max-age=86400
+
+/*.css
+  Cache-Control: public, max-age=86400
+
+/*.js
+  Cache-Control: public, max-age=86400
