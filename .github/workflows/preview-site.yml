@@ -1,5 +1,0 @@
-# =============================================================
-# DEPRECATED — Cloudflare Pages creates preview URLs for PRs automatically
-# =============================================================
-# Keeping this file for git history. Preview deployments now happen
-# via deploy-cloudflare.yml on pull_request events.
