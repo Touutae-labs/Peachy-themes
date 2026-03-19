@@ -39,9 +39,11 @@ jobs:
           vsce package --out ../../release/peachy-themes.vsix
 
       - name: Publish VS Code extension
-        if: ${{ secrets.VSCE_PAT != '' }}
+        if: env.VSCE_PAT != ''
         working-directory: packages/vscode-theme
-        run: vsce publish -p ${{ secrets.VSCE_PAT }}
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: vsce publish -p "$VSCE_PAT"
 
       - name: Package theme assets
         run: |
