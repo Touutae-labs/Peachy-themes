@@ -36,14 +36,14 @@ jobs:
         working-directory: packages/vscode-theme
         run: |
           mkdir -p ../../release
-          vsce package --out ../../release/peachy-themes.vsix
+          vsce package --no-dependencies --out ../../release/peachy-themes.vsix
 
       - name: Publish VS Code extension
         if: env.VSCE_PAT != ''
         working-directory: packages/vscode-theme
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
-        run: vsce publish -p "$VSCE_PAT"
+        run: vsce publish --no-dependencies -p "$VSCE_PAT"
 
       - name: Package theme assets
         run: |
