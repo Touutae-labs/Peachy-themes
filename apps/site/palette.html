@@ -6,29 +6,28 @@
     <title>Palette — Peachy Collection</title>
     <meta
       name="description"
-      content="The complete Peachy color palette — 19 colors with hex values, roles, and contrast ratios."
+      content="Explore every color in the Peachy theme family. Switch between Pink, Peach, and future variants."
     />
     <meta name="theme-color" content="#202330" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Palette — Peachy Collection" />
-    <meta property="og:description" content="The complete Peachy color palette with hex values and roles." />
+    <meta property="og:description" content="Explore every color in the Peachy theme family." />
     <meta property="og:site_name" content="Peachy Collection" />
-    <meta property="og:image" content="./assets/peachy-social-card.svg" />
+    <meta property="og:image" content="https://peachytheme.party/assets/social-card.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Palette — Peachy Collection" />
-    <meta name="twitter:description" content="The complete Peachy color palette with hex values and roles." />
-    <meta name="twitter:image" content="./assets/peachy-social-card.svg" />
+    <meta name="twitter:description" content="Explore every color in the Peachy theme family." />
+    <meta name="twitter:image" content="https://peachytheme.party/assets/social-card.png" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./generated/tokens.css" />
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./docs.css" />
-    <link rel="stylesheet" href="./palette.css" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
+    <link rel="stylesheet" href="./palette.css?v=3" />
   </head>
   <body>
     <div class="backdrop backdrop-a"></div>
@@ -48,175 +47,288 @@
           <a href="./docs.html">Docs</a>
           <a href="./palette.html" class="nav-active">Palette</a>
           <a href="../playground/index.html">Playground</a>
+          <a href="https://github.com/Touutae-labs/Peachy-themes">GitHub</a>
         </div>
       </nav>
-    </header>
 
-    <main class="docs-content palette-main">
-      <div class="palette-hero">
-        <p class="eyebrow">Design System</p>
-        <h1>The Peachy Palette</h1>
-        <p class="doc-intro">
-          19 hand-tuned colors that power every theme in the collection.
-          Click any swatch to copy its hex value.
+      <div class="pal-hero">
+        <p class="eyebrow">Design tokens</p>
+        <h1>The Palette</h1>
+        <p class="pal-intro">
+          Every theme in the Peachy family shares a common base but brings its own accent personality.
+          Pick a variant to explore its colors.
         </p>
       </div>
+    </header>
 
-      <div class="role-section">
-        <h2>Base &amp; Text</h2>
-        <p>Backgrounds, panels, and foreground text colors.</p>
-      </div>
-      <div class="color-grid" id="base-colors"></div>
+    <main class="pal-main">
+      <!-- Theme switcher -->
+      <div class="theme-switcher" id="theme-switcher" role="tablist" aria-label="Theme variant"></div>
 
-      <div class="role-section">
-        <h2>Accent &amp; Fruit</h2>
-        <p>The core peachy tones — primary accent, highlights, and warm pinks.</p>
-      </div>
-      <div class="color-grid" id="accent-colors"></div>
+      <!-- Color grid rendered by JS -->
+      <section class="pal-section">
+        <h2 class="pal-group-title">Base &amp; Text</h2>
+        <p class="pal-group-desc">Backgrounds, panels, and foreground text — shared across all variants.</p>
+        <div class="color-grid" id="base-colors"></div>
+      </section>
 
-      <div class="role-section">
-        <h2>Supporting</h2>
-        <p>Secondary colors for syntax, status, and decorative elements.</p>
-      </div>
-      <div class="color-grid" id="support-colors"></div>
+      <section class="pal-section">
+        <h2 class="pal-group-title">Accents</h2>
+        <p class="pal-group-desc">The defining personality of this variant.</p>
+        <div class="color-grid" id="accent-colors"></div>
+      </section>
 
-      <div class="role-section">
-        <h2>Syntax Roles</h2>
-        <p>How colors are assigned to code elements across all themes.</p>
-      </div>
-      <table class="role-table">
-        <thead>
-          <tr>
-            <th>Role</th>
-            <th>Color</th>
-            <th>Token</th>
-            <th>Used for</th>
-          </tr>
-        </thead>
-        <tbody id="syntax-roles"></tbody>
-      </table>
+      <section class="pal-section">
+        <h2 class="pal-group-title">Supporting</h2>
+        <p class="pal-group-desc">Secondary colors for syntax, status, and decorative elements.</p>
+        <div class="color-grid" id="support-colors"></div>
+      </section>
+
+      <section class="pal-section">
+        <h2 class="pal-group-title">Syntax Roles</h2>
+        <p class="pal-group-desc">How colors map to code elements in this variant.</p>
+        <div class="role-grid" id="syntax-roles"></div>
+      </section>
+
+      <!-- Code preview -->
+      <section class="pal-section">
+        <h2 class="pal-group-title">Preview</h2>
+        <p class="pal-group-desc">See how the variant looks on real code.</p>
+        <div class="code-preview-wrap" id="code-preview"></div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <p>Made with warmth by <a href="https://github.com/Touutae-labs">Touutae Labs</a></p>
       <p class="footer-links">
         <a href="https://github.com/Touutae-labs/Peachy-themes">GitHub</a>
-        <a href="https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes">VS Code Marketplace</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes">Marketplace</a>
       </p>
     </footer>
 
     <div class="copied-toast" id="toast">Copied!</div>
 
-    <script src="./generated/palette.js"></script>
     <script>
-      const palette = window.PEACHY_PALETTE;
-      const colors = palette ? palette.colors : {};
+    (function () {
+      "use strict";
 
-      const groups = {
-        base: ['base.950','base.900','base.800','base.700','base.600','text.primary','text.soft','text.muted'],
-        accent: ['peach.500','peach.400','peach.300'],
-        support: ['melon.400','cream.300','mint.300','mint.500','gold.500','rose.500','success.500','cyan.300']
-      };
+      /* ── Theme definitions ── */
+      /* Each theme: id, label, accent border color, and color groups */
+      const themes = [
+        {
+          id: "peach",
+          label: "Peach",
+          accent: "#ff928b",
+          base: [
+            { name: "base.950", hex: "#202330", role: "App background" },
+            { name: "base.900", hex: "#2d2f42", role: "Panel / sidebar" },
+            { name: "base.800", hex: "#472541", role: "Selection highlight" },
+            { name: "base.700", hex: "#565970", role: "Borders / dividers" },
+            { name: "base.600", hex: "#6d5d72", role: "Inactive elements" },
+            { name: "text.primary", hex: "#fff8f8", role: "Default foreground" },
+            { name: "text.soft", hex: "#f3b4bf", role: "Soft emphasis" },
+            { name: "text.muted", hex: "#9b9999", role: "Comments / hints" },
+          ],
+          accents: [
+            { name: "peach.500", hex: "#ff928b", role: "Primary accent" },
+            { name: "peach.400", hex: "#fe7c8e", role: "Secondary accent" },
+            { name: "peach.300", hex: "#fec3d6", role: "Types / properties" },
+          ],
+          support: [
+            { name: "melon.400", hex: "#ffac81", role: "Numbers / constants" },
+            { name: "cream.300", hex: "#efe9ae", role: "Functions / headings" },
+            { name: "mint.300", hex: "#cdeac0", role: "Keywords" },
+            { name: "mint.500", hex: "#729760", role: "Comments" },
+            { name: "gold.500", hex: "#d0963a", role: "Warnings" },
+            { name: "rose.500", hex: "#ff62a5", role: "Errors / deletes" },
+            { name: "success.500", hex: "#3bc089", role: "Success / inserts" },
+            { name: "cyan.300", hex: "#bde8db", role: "Info / decorative" },
+          ],
+          syntax: [
+            { role: "Strings", hex: "#ff928b", desc: "String literals" },
+            { role: "Functions", hex: "#efe9ae", desc: "Function names, calls" },
+            { role: "Keywords", hex: "#cdeac0", desc: "if, const, return" },
+            { role: "Types", hex: "#fec3d6", desc: "Type annotations" },
+            { role: "Numbers", hex: "#ffac81", desc: "Numeric literals" },
+            { role: "Comments", hex: "#729760", desc: "Line & block comments" },
+            { role: "Properties", hex: "#f3b4bf", desc: "Object keys" },
+            { role: "Errors", hex: "#ff62a5", desc: "Diagnostics, deleted" },
+            { role: "Success", hex: "#3bc089", desc: "Added lines" },
+          ],
+          preview: {
+            bg: "#202330",
+            lines: [
+              { text: "// Peachy Peach — soft & calm", color: "#729760" },
+              { text: "const", color: "#cdeac0", rest: [" theme ", { text: "=", color: "#f3b4bf" }, " {"] },
+              { text: '  name:', color: "#f3b4bf", rest: [' ', { text: '"Peach"', color: "#ff928b" }, ','] },
+              { text: '  accent:', color: "#f3b4bf", rest: [' ', { text: '"#ff928b"', color: "#ff928b" }, ','] },
+              { text: '  tokens:', color: "#f3b4bf", rest: [' ', { text: '19', color: "#ffac81" }, ','] },
+              { text: "};", color: "#fff8f8" },
+            ]
+          }
+        },
+        {
+          id: "pink",
+          label: "Pink",
+          accent: "#FA508C",
+          base: [
+            { name: "base.950", hex: "#202330", role: "App background" },
+            { name: "base.900", hex: "#2d2f42", role: "Panel / sidebar" },
+            { name: "base.800", hex: "#472541", role: "Selection highlight" },
+            { name: "base.700", hex: "#565970", role: "Borders / dividers" },
+            { name: "base.600", hex: "#6d5d72", role: "Inactive elements" },
+            { name: "text.primary", hex: "#fff8f8", role: "Default foreground" },
+            { name: "text.soft", hex: "#f3b4bf", role: "Soft emphasis" },
+            { name: "text.muted", hex: "#9b9999", role: "Comments / hints" },
+          ],
+          accents: [
+            { name: "hot-pink", hex: "#FA508C", role: "Primary accent / keywords" },
+            { name: "golden", hex: "#FFC85B", role: "Functions / calls" },
+            { name: "lavender", hex: "#DCBFF2", role: "Types / decorators" },
+            { name: "warm-cream", hex: "#FAE8B6", role: "Strings" },
+          ],
+          support: [
+            { name: "lime", hex: "#9CD162", role: "Success / inserted" },
+            { name: "purple", hex: "#E6A1FF", role: "Constants / enums" },
+            { name: "blue", hex: "#A2C2EB", role: "Info / parameters" },
+            { name: "variable-pink", hex: "#EBA4AC", role: "Variables" },
+            { name: "rose.500", hex: "#ff62a5", role: "Errors / deletes" },
+            { name: "mint.500", hex: "#729760", role: "Comments" },
+          ],
+          syntax: [
+            { role: "Strings", hex: "#FAE8B6", desc: "String literals" },
+            { role: "Functions", hex: "#FFC85B", desc: "Function names, calls" },
+            { role: "Keywords", hex: "#FA508C", desc: "if, const, return" },
+            { role: "Types", hex: "#DCBFF2", desc: "Type annotations" },
+            { role: "Numbers", hex: "#E6A1FF", desc: "Numeric literals" },
+            { role: "Comments", hex: "#729760", desc: "Line & block comments" },
+            { role: "Variables", hex: "#EBA4AC", desc: "Variables, params" },
+            { role: "Errors", hex: "#ff62a5", desc: "Diagnostics, deleted" },
+            { role: "Success", hex: "#9CD162", desc: "Added lines" },
+          ],
+          preview: {
+            bg: "#202330",
+            lines: [
+              { text: "// Peachy Pink — vibrant & bold", color: "#729760" },
+              { text: "const", color: "#FA508C", rest: [" theme ", { text: "=", color: "#EBA4AC" }, " {"] },
+              { text: '  name:', color: "#EBA4AC", rest: [' ', { text: '"Pink"', color: "#FAE8B6" }, ','] },
+              { text: '  accent:', color: "#EBA4AC", rest: [' ', { text: '"#FA508C"', color: "#FAE8B6" }, ','] },
+              { text: '  tokens:', color: "#EBA4AC", rest: [' ', { text: '19', color: "#E6A1FF" }, ','] },
+              { text: "};", color: "#fff8f8" },
+            ]
+          }
+        },
+      ];
 
-      const roleDescriptions = {
-        'base.950': 'App background',
-        'base.900': 'Panel / sidebar',
-        'base.800': 'Selection highlight',
-        'base.700': 'Borders / dividers',
-        'base.600': 'Inactive elements',
-        'text.primary': 'Default foreground',
-        'text.soft': 'Soft emphasis',
-        'text.muted': 'Comments / hints',
-        'peach.500': 'Primary accent',
-        'peach.400': 'Secondary accent',
-        'peach.300': 'Types / properties',
-        'melon.400': 'Numbers / constants',
-        'cream.300': 'Functions / headings',
-        'mint.300': 'Keywords / statements',
-        'mint.500': 'Comments',
-        'gold.500': 'Warnings',
-        'rose.500': 'Errors / deletes',
-        'success.500': 'Success / inserts',
-        'cyan.300': 'Info / decorative'
-      };
+      let activeTheme = themes[0];
 
-      function createColorItem(name) {
-        const hex = colors[name];
-        if (!hex) return null;
+      /* ── Helpers ── */
+      function $(id) { return document.getElementById(id); }
 
-        const el = document.createElement('div');
-        el.className = 'color-item';
-        el.setAttribute('data-hex', hex);
-
-        // Determine text color based on luminance
+      function lum(hex) {
         const r = parseInt(hex.slice(1,3), 16);
         const g = parseInt(hex.slice(3,5), 16);
         const b = parseInt(hex.slice(5,7), 16);
-        const lum = (0.299*r + 0.587*g + 0.114*b) / 255;
-        const textColor = lum > 0.5 ? '#202330' : '#fff8f8';
-
-        el.innerHTML = `
-          <div class="color-chip" style="background:${hex}">
-            <span class="color-chip-hex" style="color:${textColor}">${hex.toUpperCase()}</span>
-          </div>
-          <div class="color-info">
-            <span class="color-name">${name.replace('.', ' · ')}</span>
-            <span class="color-role">${roleDescriptions[name] || ''}</span>
-          </div>
-        `;
-
-        el.addEventListener('click', () => {
-          navigator.clipboard.writeText(hex).then(() => showToast(hex));
-        });
-
-        return el;
+        return (0.299*r + 0.587*g + 0.114*b) / 255;
       }
 
       function showToast(hex) {
-        const toast = document.getElementById('toast');
-        toast.textContent = `Copied ${hex}`;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 1800);
+        const toast = $("toast");
+        if (!toast) return;
+        toast.textContent = "Copied " + hex;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 1800);
       }
 
-      function populateGrid(containerId, names) {
-        const container = document.getElementById(containerId);
-        names.forEach(name => {
-          const item = createColorItem(name);
-          if (item) container.appendChild(item);
+      function copyHex(hex) {
+        navigator.clipboard.writeText(hex).then(() => showToast(hex));
+      }
+
+      /* ── Render functions ── */
+      function renderSwitcher() {
+        const el = $("theme-switcher");
+        if (!el) return;
+        el.innerHTML = themes.map(t => `
+          <button
+            class="theme-tab ${t.id === activeTheme.id ? 'active' : ''}"
+            data-theme="${t.id}"
+            role="tab"
+            aria-selected="${t.id === activeTheme.id}"
+            style="--tab-accent: ${t.accent}"
+          >
+            <span class="tab-dot" style="background:${t.accent}"></span>
+            ${t.label}
+          </button>
+        `).join("");
+
+        el.querySelectorAll(".theme-tab").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const t = themes.find(th => th.id === btn.dataset.theme);
+            if (t) { activeTheme = t; render(); }
+          });
         });
       }
 
-      populateGrid('base-colors', groups.base);
-      populateGrid('accent-colors', groups.accent);
-      populateGrid('support-colors', groups.support);
+      function renderColorGrid(containerId, colors) {
+        const el = $(containerId);
+        if (!el) return;
+        el.innerHTML = colors.map(c => {
+          const textColor = lum(c.hex) > 0.5 ? "#202330" : "#fff8f8";
+          return `
+            <div class="color-item" data-hex="${c.hex}" onclick="navigator.clipboard.writeText('${c.hex}').then(function(){document.getElementById('toast').textContent='Copied ${c.hex}';document.getElementById('toast').classList.add('show');setTimeout(function(){document.getElementById('toast').classList.remove('show')},1800)})">
+              <div class="color-chip" style="background:${c.hex}">
+                <span class="chip-hex" style="color:${textColor}">${c.hex.toUpperCase()}</span>
+              </div>
+              <div class="color-info">
+                <span class="color-name">${c.name}</span>
+                <span class="color-role">${c.role}</span>
+              </div>
+            </div>`;
+        }).join("");
+      }
 
-      // Syntax role table
-      const syntaxRoles = [
-        { role: 'Strings', token: 'peach.500', desc: 'String literals, template strings' },
-        { role: 'Functions', token: 'cream.300', desc: 'Function names, method calls' },
-        { role: 'Keywords', token: 'mint.300', desc: 'if, const, return, export' },
-        { role: 'Types', token: 'peach.300', desc: 'Type annotations, interfaces' },
-        { role: 'Numbers', token: 'melon.400', desc: 'Numeric literals, constants' },
-        { role: 'Comments', token: 'mint.500', desc: 'Line and block comments (italic)' },
-        { role: 'Properties', token: 'text.soft', desc: 'Object keys, attributes' },
-        { role: 'Warnings', token: 'gold.500', desc: 'Warning diagnostics, changed lines' },
-        { role: 'Errors', token: 'rose.500', desc: 'Error diagnostics, deleted lines' },
-        { role: 'Success', token: 'success.500', desc: 'Success status, added lines' },
-      ];
+      function renderSyntaxRoles(roles) {
+        const el = $("syntax-roles");
+        if (!el) return;
+        el.innerHTML = roles.map(r => `
+          <div class="role-card" onclick="navigator.clipboard.writeText('${r.hex}').then(function(){document.getElementById('toast').textContent='Copied ${r.hex}';document.getElementById('toast').classList.add('show');setTimeout(function(){document.getElementById('toast').classList.remove('show')},1800)})">
+            <span class="role-dot" style="background:${r.hex}"></span>
+            <div class="role-text">
+              <strong>${r.role}</strong>
+              <span>${r.desc}</span>
+            </div>
+            <code class="role-hex">${r.hex}</code>
+          </div>
+        `).join("");
+      }
 
-      const tbody = document.getElementById('syntax-roles');
-      syntaxRoles.forEach(({ role, token, desc }) => {
-        const hex = colors[token] || '#000';
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td><strong>${role}</strong></td>
-          <td><span class="role-swatch" style="background:${hex}"></span><span class="role-hex">${hex}</span></td>
-          <td><code style="background:rgba(45,47,66,0.7);padding:0.15em 0.45em;border-radius:0.3em;font-family:'JetBrains Mono',monospace;font-size:0.82em;color:var(--peach)">${token}</code></td>
-          <td>${desc}</td>
-        `;
-        tbody.appendChild(tr);
-      });
+      function renderPreview(preview) {
+        const el = $("code-preview");
+        if (!el) return;
+        const lines = preview.lines.map(line => {
+          let html = `<span style="color:${line.color}">${line.text}</span>`;
+          if (line.rest) {
+            line.rest.forEach(part => {
+              if (typeof part === "string") html += `<span style="color:#fff8f8">${part}</span>`;
+              else html += `<span style="color:${part.color}">${part.text}</span>`;
+            });
+          }
+          return html;
+        }).join("\n");
+        el.innerHTML = `<pre class="code-block" style="background:${preview.bg}">${lines}</pre>`;
+      }
+
+      function render() {
+        renderSwitcher();
+        renderColorGrid("base-colors", activeTheme.base);
+        renderColorGrid("accent-colors", activeTheme.accents);
+        renderColorGrid("support-colors", activeTheme.support);
+        renderSyntaxRoles(activeTheme.syntax);
+        renderPreview(activeTheme.preview);
+      }
+
+      render();
+    })();
     </script>
   </body>
 </html>

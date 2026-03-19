@@ -15,7 +15,11 @@
       property="og:description"
       content="A warm dark theme for VS Code, Neovim, WezTerm, and Oh My Posh. Two flavors: Pink and Peach."
     />
-    <meta property="og:image" content="./assets/peachy-social-card.svg" />
+    <meta property="og:image" content="https://peachytheme.party/assets/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content="https://peachytheme.party/" />
     <meta property="og:site_name" content="Peachy Collection" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Peachy Collection" />
@@ -23,7 +27,7 @@
       name="twitter:description"
       content="A warm dark theme for VS Code, Neovim, WezTerm, and Oh My Posh. Two flavors: Pink and Peach."
     />
-    <meta name="twitter:image" content="./assets/peachy-social-card.svg" />
+    <meta name="twitter:image" content="https://peachytheme.party/assets/social-card.png" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,7 +36,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./generated/tokens.css" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -41,17 +45,17 @@
 
     <header class="hero">
       <nav class="nav">
-        <div class="brand">
+        <a class="brand" href="./index.html">
           <img class="brand-icon" src="./assets/peachy-mark.svg" alt="Peachy logo" />
           <div class="brand-copy">
             <span class="brand-mark">Peachy</span>
             <span class="brand-subtitle">Collection</span>
           </div>
-        </div>
+        </a>
         <div class="nav-links">
-          <a href="#install">Install</a>
-          <a href="#palette">Palette</a>
+          <a href="./index.html" class="nav-active">Home</a>
           <a href="./docs.html">Docs</a>
+          <a href="./palette.html">Palette</a>
           <a href="../playground/index.html">Playground</a>
           <a href="https://github.com/Touutae-labs/Peachy-themes">GitHub</a>
         </div>
@@ -137,11 +141,15 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="site-footer">
       <p>Made with warmth by <a href="https://github.com/Touutae-labs">Touutae Labs</a></p>
+      <p class="footer-links">
+        <a href="https://github.com/Touutae-labs/Peachy-themes">GitHub</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=Piros-k.peachy-themes">Marketplace</a>
+      </p>
     </footer>
 
     <script src="./generated/palette.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js?v=3"></script>
   </body>
 </html>

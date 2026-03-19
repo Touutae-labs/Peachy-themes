@@ -1,72 +1,213 @@
-.palette-hero {
-  padding: 0 0 1rem;
+/* ── Palette page — extends styles.css ── */
+
+/* ── Hero overrides ── */
+.pal-hero {
+  padding: 3rem 0 1rem;
 }
 
-.palette-hero h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin: 0;
+.pal-intro {
+  max-width: 56ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 1rem 0 0;
 }
 
-.palette-main {
-  width: min(1120px, calc(100% - 2rem));
+/* ── Main content ── */
+.pal-main {
+  width: min(1200px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2rem 0 4rem;
+  padding: 0 0 3rem;
 }
 
+/* ── Theme switcher tabs ── */
+.theme-switcher {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0 2.5rem;
+  padding: 0.35rem;
+  background: rgba(45, 47, 66, 0.5);
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.theme-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.theme-tab:hover {
+  color: var(--text);
+}
+
+.theme-tab.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tab-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* ── Sections ── */
+.pal-section {
+  margin-bottom: 2.5rem;
+}
+
+.pal-group-title {
+  font-size: 1.5rem;
+  margin: 0 0 0.3rem;
+}
+
+.pal-group-desc {
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+}
+
+/* ── Color grid ── */
 .color-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.85rem;
 }
 
 .color-item {
-  border-radius: 1.15rem;
+  border-radius: 1.1rem;
   overflow: hidden;
-  border: 1px solid rgba(254, 195, 214, 0.12);
+  border: 1px solid rgba(254, 195, 214, 0.1);
   background: rgba(45, 47, 66, 0.7);
   cursor: pointer;
   transition: border-color 200ms, transform 200ms;
 }
 
 .color-item:hover {
-  border-color: rgba(255, 146, 139, 0.3);
+  border-color: rgba(255, 146, 139, 0.35);
   transform: translateY(-2px);
 }
 
 .color-chip {
-  height: 100px;
+  height: 5.5rem;
   position: relative;
 }
 
-.color-chip-hex {
+.chip-hex {
   position: absolute;
-  bottom: 8px;
-  right: 10px;
+  bottom: 0.5rem;
+  right: 0.6rem;
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.75rem;
-  padding: 0.15em 0.45em;
+  font-size: 0.72rem;
+  padding: 0.15em 0.4em;
   border-radius: 0.3em;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .color-info {
-  padding: 0.85rem 1rem;
+  padding: 0.7rem 0.85rem;
 }
 
 .color-name {
   display: block;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--text);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .color-role {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--muted);
 }
 
+/* ── Syntax role cards ── */
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.7rem;
+}
+
+.role-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.9rem;
+  background: rgba(45, 47, 66, 0.6);
+  border: 1px solid rgba(254, 195, 214, 0.08);
+  cursor: pointer;
+  transition: border-color 200ms, transform 150ms;
+}
+
+.role-card:hover {
+  border-color: rgba(255, 146, 139, 0.3);
+  transform: translateY(-1px);
+}
+
+.role-dot {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.35rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.role-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.role-text strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.role-text span {
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.role-hex {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.76rem;
+  color: var(--soft);
+  flex-shrink: 0;
+}
+
+/* ── Code preview ── */
+.code-preview-wrap {
+  margin-top: 0.5rem;
+}
+
+.code-block {
+  margin: 0;
+  padding: 1.5rem;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(254, 195, 214, 0.1);
+  overflow: auto;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+/* ── Toast ── */
 .copied-toast {
   position: fixed;
   bottom: 2rem;
@@ -82,62 +223,16 @@
   pointer-events: none;
   z-index: 100;
 }
-
 .copied-toast.show {
   transform: translateX(-50%) translateY(0);
 }
 
-.role-section {
-  margin: 3rem 0 1rem;
-}
-
-.role-section h2 {
-  font-size: 1.6rem;
-  margin: 0 0 0.3rem;
-}
-
-.role-section p {
-  color: var(--muted);
-  margin: 0 0 1rem;
-}
-
-.role-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  font-size: 0.9rem;
-}
-
-.role-table th,
-.role-table td {
-  text-align: left;
-  padding: 0.65rem 1rem;
-  border-bottom: 1px solid rgba(254, 195, 214, 0.08);
-}
-
-.role-table th {
-  color: var(--soft);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.role-table td {
-  color: var(--muted);
-}
-
-.role-swatch {
-  display: inline-block;
-  width: 1.1rem;
-  height: 1.1rem;
-  border-radius: 0.3rem;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.role-hex {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.82rem;
-  color: var(--text);
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .color-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
 }

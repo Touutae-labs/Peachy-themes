@@ -153,26 +153,6 @@
   margin-top: 1rem;
 }
 
-.site-footer {
-  width: min(1200px, calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 0 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  color: var(--muted);
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.site-footer a {
-  color: var(--soft);
-}
-
 @media (max-width: 1080px) {
   .docs-main {
     grid-template-columns: 1fr;
@@ -184,9 +164,5 @@
 
   .doc-cards {
     grid-template-columns: 1fr;
-  }
-
-  .site-footer {
-    flex-direction: column;
   }
 }
