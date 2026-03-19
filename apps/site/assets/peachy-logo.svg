@@ -1,0 +1,23 @@
+<svg width="728" height="224" viewBox="0 0 728 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="peachyFruitWide" x1="44" y1="24" x2="164" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FEC3D6"/>
+      <stop offset="0.45" stop-color="#FF928B"/>
+      <stop offset="1" stop-color="#FE7C8E"/>
+    </linearGradient>
+    <linearGradient id="peachyLeafWide" x1="102" y1="6" x2="162" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#CDEAC0"/>
+      <stop offset="1" stop-color="#729760"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="728" height="224" rx="44" fill="#202330"/>
+  <g transform="translate(22 16)">
+    <circle cx="74" cy="108" r="48" fill="url(#peachyFruitWide)"/>
+    <circle cx="118" cy="108" r="48" fill="url(#peachyFruitWide)"/>
+    <path d="M96 54C99 41 108.24 17.72 132 14C129.48 32.4 117.75 46.83 112.2 51.17L96 54Z" fill="url(#peachyLeafWide)"/>
+    <path d="M96 61C84.3333 70.4444 75.3333 84.6667 74.3333 112.667C73.3333 140.667 83.9167 156.278 89.3333 161" stroke="#FFF8F8" stroke-opacity="0.7" stroke-width="6.5" stroke-linecap="round"/>
+  </g>
+  <text x="190" y="106" fill="#FFF8F8" font-size="74" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Peachy</text>
+  <text x="194" y="150" fill="#F3B4BF" font-size="22" font-family="Arial, Helvetica, sans-serif" letter-spacing="7">COLLECTION</text>
+</svg>

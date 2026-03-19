@@ -1,0 +1,21 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="peachyFruit" x1="56" y1="48" x2="196" y2="208" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FEC3D6"/>
+      <stop offset="0.45" stop-color="#FF928B"/>
+      <stop offset="1" stop-color="#FE7C8E"/>
+    </linearGradient>
+    <linearGradient id="peachyLeaf" x1="112" y1="28" x2="176" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#CDEAC0"/>
+      <stop offset="1" stop-color="#729760"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="12" y="12" width="232" height="232" rx="64" fill="#202330"/>
+  <circle cx="102" cy="144" r="58" fill="url(#peachyFruit)"/>
+  <circle cx="154" cy="144" r="58" fill="url(#peachyFruit)"/>
+  <path d="M128 76C131.333 60.6667 141.6 32.4 168 28C165.2 49.2 152.167 65.8333 146 71L128 76Z" fill="url(#peachyLeaf)"/>
+  <path d="M128 84C114 95.3333 103.2 112.4 102 146C100.8 179.6 113.5 198.333 120 204" stroke="#FFF8F8" stroke-opacity="0.7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M70 164C80.8333 177.5 96.4 184.8 110 184" stroke="#F3B4BF" stroke-width="8" stroke-linecap="round" stroke-opacity="0.7"/>
+  <path d="M146 184C160.4 184.4 175.167 177.833 186 164" stroke="#F3B4BF" stroke-width="8" stroke-linecap="round" stroke-opacity="0.7"/>
+</svg>

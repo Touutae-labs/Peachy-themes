@@ -30,6 +30,13 @@ a {
   padding: 2rem 0 1rem;
 }
 
+.brand-logo {
+  width: min(100%, 18rem);
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .eyebrow {
   margin: 0;
   color: var(--melon);

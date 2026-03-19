@@ -1,0 +1,31 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(238 92) rotate(47.29) scale(471.435 462.214)">
+      <stop stop-color="#FF928B" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#FF928B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 108) rotate(129.434) scale(401.121 366.34)">
+      <stop stop-color="#CDEAC0" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#CDEAC0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardFruit" x1="140" y1="140" x2="350" y2="404" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FEC3D6"/>
+      <stop offset="0.5" stop-color="#FF928B"/>
+      <stop offset="1" stop-color="#FE7C8E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" rx="40" fill="#202330"/>
+  <rect width="1200" height="630" rx="40" fill="url(#glowA)"/>
+  <rect width="1200" height="630" rx="40" fill="url(#glowB)"/>
+
+  <circle cx="234" cy="334" r="104" fill="url(#cardFruit)"/>
+  <circle cx="326" cy="334" r="104" fill="url(#cardFruit)"/>
+  <path d="M280 216C286 188.667 304.48 139.56 352 132C346.96 170.64 323.5 200.96 312.4 210.08L280 216Z" fill="#CDEAC0"/>
+  <path d="M280 232C255.333 250.667 236.333 278.4 234.333 335.2C232.333 392 254.833 423.667 266 433" stroke="#FFF8F8" stroke-opacity="0.75" stroke-width="12" stroke-linecap="round"/>
+
+  <text x="450" y="268" fill="#FFAC81" font-size="28" font-family="Arial, Helvetica, sans-serif" letter-spacing="8">PEACHY COLLECTION</text>
+  <text x="450" y="364" fill="#FFF8F8" font-size="88" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Soft themes for the</text>
+  <text x="450" y="454" fill="#FFF8F8" font-size="88" font-family="Georgia, 'Times New Roman', serif" font-weight="700">whole dev setup.</text>
+  <text x="450" y="520" fill="#F3B4BF" font-size="30" font-family="Arial, Helvetica, sans-serif">VS Code • LazyVim • WezTerm • Oh My Posh • Tokens</text>
+</svg>

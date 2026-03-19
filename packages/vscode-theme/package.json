@@ -5,11 +5,20 @@
   "version": "0.1.0",
   "publisher": "Piros-k",
   "license": "MIT",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#202330",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Touutae-labs/Peachy-themes.git"
   },
+  "bugs": {
+    "url": "https://github.com/Touutae-labs/Peachy-themes/issues"
+  },
   "homepage": "https://github.com/Touutae-labs/Peachy-themes",
+  "qna": "https://github.com/Touutae-labs/Peachy-themes/discussions",
   "keywords": [
     "theme",
     "vscode-theme",
