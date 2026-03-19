@@ -1,4 +1,4 @@
-name: CI + Deploy
+name: CI
 
 on:
   pull_request:
@@ -53,30 +53,3 @@ jobs:
             [ -f "$f" ] || { echo "MISSING: $f"; exit 1; }
           done
           echo "All site files present."
-
-  deploy:
-    needs: validate
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Generate shared assets
-        run: npm run generate
-
-      - name: Install Wrangler
-        run: npm install -g wrangler
-
-      - name: Deploy to Cloudflare Pages
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: wrangler pages deploy apps --project-name=peachy-collection --branch=main
